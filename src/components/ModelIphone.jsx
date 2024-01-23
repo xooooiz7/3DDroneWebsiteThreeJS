@@ -66,7 +66,6 @@ export function ModelPhone(props) {
         } , 0
     )
 
-    
     // tl.current.from(
     //     atticRef.current.position,{
     //         duration : 0.5,
