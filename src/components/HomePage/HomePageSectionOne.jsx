@@ -1,7 +1,7 @@
 import { Scroll } from "@react-three/drei";
-import '../App.scss';
+import '../.././App.scss';
 
-export const Overlay = () => {
+export const HomePageSectionOne = () => {
   return (
     <Scroll html>
       <div className="first-container">
@@ -55,20 +55,3 @@ export const Overlay = () => {
   );
 };
 
-export const NavOverlay = () => {
-  return (
-      <header>
-        <nav className="nav-bar-container">
-          <div className="nav-bar-link">
-            <a href="#">Home</a>
-            <a href="#">Our Custom</a>
-            <a href="#">Contact Us</a>
-          </div>
-          <div className="nav-bar-logo">
-            <a href="#">Logo A</a>
-            <a href="#">Logo B</a>
-          </div>
-        </nav>
-      </header>
-  );
-};
