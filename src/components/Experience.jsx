@@ -1,18 +1,18 @@
 import { OrbitControls, ScrollControls } from "@react-three/drei"
-import { ModelPhone } from "./ModelIphone"
+import { FullDroneModel } from "./Modelwithcolor"
+import { Overlay } from "./Overlay"
 
 export const Experience = () => {
     return (
         <>
-
-        <ambientLight intensity={10}/>
-        {/* ใช้สำหรับการควบคุม ทิศทางการหมุน */}
-        <OrbitControls enableZoom={false}/>
-        {/* ค่าที่ใช้ในการกำหนดจำนวนของหน้าที่สามารถเลื่อนได้ */}
-        <ScrollControls pages={2} damping={0.25}>
-        <ModelPhone scale={-0.005} />
-        </ScrollControls>
+        <directionalLight intensity={8.5} position={[1,6,9]} />
+        <OrbitControls enableZoom={false} enableRotate={false}/>
         
+        <ScrollControls pages={4} damping={0.2}>
+            
+            <Overlay/>
+            <FullDroneModel scale={3.5} position={[0.1, 0, -1.2]} rotation={[0.1, -0.9,-1.21]} />
+        </ScrollControls>
         </>
     )
 }
