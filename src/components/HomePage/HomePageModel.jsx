@@ -28,6 +28,7 @@ export function FullDroneModel(props) {
   const wing_3 = useRef();
   const wing_4 = useRef();
   const scroll = useScroll() ;
+
   useFrame(() => {
     tl.current.seek(scroll.offset * tl.current.duration());
   })
@@ -59,7 +60,7 @@ export function FullDroneModel(props) {
     tl.current.to(
       ref.current.position,
       {
-        duration: time_slide,
+        duration: 0.01,
         y: -FLOOR_HEIGHT * NB_FLOORS+2,
       },
     );
@@ -165,6 +166,7 @@ export function FullDroneModel(props) {
     
   },[]);
   return (
+    
     <group ref={ref} {...props} dispose={null}>
       <group name="Scene">
         <group name="group" position={[0.03, 0.01, -0.35]}  rotation={[Math.PI / 2, 0, 0]} scale={0.001}>

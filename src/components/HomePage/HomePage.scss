@@ -7,7 +7,7 @@
     margin-top: 10vh;
 }
 #underline-two{
-    margin-top: -14vh;
+    margin-top: -3vh;
 }
 .nav-bar-container{
     background-color: $nav-color;
@@ -33,11 +33,12 @@
 }
 .welcome-text{
     height: 45vh;
-    padding-top: 3vh;
+    padding-top: 8vh;
 }
 .welcome-text h1{
     color: $font-white-color;
     font-size: 5vw;
+    margin-top: -2vh;
     font-weight: 400;
 }
 #welcome-text-custom{
@@ -54,7 +55,7 @@
     color: $font-white-color;
 }
 .container-discription{
-    margin-top: 5vh;
+    margin-top: 8vh;
     height: 5vh;
 }
 .button-main{
@@ -64,11 +65,13 @@
 .make-your-own-btn{
     background-color: $font-orange-color;
 }
+
 .our-product-btn{
     background: none;
     border: 1px solid $font-orange-color;
     margin-left: 2vw;
 }
+
 .our-product-btn ,.make-your-own-btn {
     width: 8vw;
     height: 4.15vh;
@@ -79,7 +82,7 @@
 .our-product-btn p ,.make-your-own-btn p {
     font-size: 0.85vw;
 } 
-.our-product-btn p{
+.our-product-btn p , .make-your-own-btn p{
     color: $font-white-color
 }
 .main-container-Pcs{
@@ -165,6 +168,7 @@
 #orange-title-wwhd{
     color:$font-orange-color
 }
+
 .Pcs-sectionThree{
     margin-left: 28vw;
     // background-color: rgb(65, 83, 66);
@@ -234,4 +238,79 @@
 }
 .box-components{
     margin-left: 5vw
+}
+// HomePage Section Four ///////////////////////////
+.HomePageContainerSectionFour{
+    margin-top: 9vh;
+    width: 100vw;
+}
+.line-1-sectionFour , .line-1-right ,.line-3-sectionFour{
+    display: flex;
+}
+.line-1-left , .line-1-right{
+    margin-left: 20vw;
+}
+.line-1-right p{
+    padding-left: 4.5vw;
+}
+.line-1-left p , .line-1-right p{
+    font-size: 1.1vw;
+    color: $font-white-color;
+    font-weight: 200;
+}
+.HomePageContainerSectionFour hr {
+    margin-top: 2vh;
+}
+.line-2-sectionFour{
+    display: flex;
+}
+.line-2-sectionFour p , .line-3-sectionFour p {
+    font-size: $font-size-small;
+}
+.line-2-box-1 , .line-2-box-2 , .line-2-box-3{
+    margin-top: 4vh;
+    width: 20vw;
+}
+.line-3-box-1 , .line-3-box-2 ,.line-3-box-3{
+    margin-top: 4vh;
+    font-weight: 400;
+    color: $font-white-color;
+    width: 20vw;
+
+}
+
+.box-top-1{
+    font-weight: 100;
+    color: $font-white-color
+}
+.box-down-1{
+    font-weight: 500;
+    color: $font-white-color;
+}
+.line-section-four {
+    border-top: 0.4px solid rgba(255, 255, 255, 0.116);
+    width: 90vw;
+    margin-left: 5vw;
+    padding-top: 2vh;
+    padding-bottom: 1vh;
+}
+.line-3-sectionFour , .line-2-sectionFour{
+    justify-content: space-between;
+    margin-left: 20vw;
+    margin-right: 10vw;
+}
+
+//Hover///////////////
+.make-your-own-btn:hover ,.buy-now:hover{
+    background-color: $font-hover-orange-color;
+}
+.our-product-btn:hover , .View-more:hover{
+    background-color: $font-hover-orange-color;
+    border: 1px solid $font-hover-orange-color;
+
+}
+.View-more:hover{
+    background-color: rgb(190, 90, 63);
+    border: 1px solid rgb(190, 90, 63);
+    color: $font-white-color;
 }

@@ -15,9 +15,10 @@ function App() {
       fov:64 ,
       position : [2.3,1.5,2.3] 
      }}>  
-      <HomePage/>
       
+      <HomePage/>
      </Canvas>
+
     </>
   )
 }
