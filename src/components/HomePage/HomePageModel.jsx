@@ -8,7 +8,7 @@ import { useFrame } from '@react-three/fiber';
 export const FLOOR_HEIGHT = -0.1 ; 
 export const NB_FLOORS = 5; 
 
-export const time_slide = 1;
+export const time_slide = 0.01;
 
 export function FullDroneModel(props) {
 
@@ -38,19 +38,19 @@ export function FullDroneModel(props) {
     tl.current.to(
         ref.current.rotation,
         {
-            duration:time_slide,
-            x: -0.001,
-            y: -0.79,
-            z: -0.07,
+            duration:0.007,
+            x: -0.0001,
+            y: -0.75,
+            z: -0.17,
         },
     );
 
     tl.current.to(
       ref.current.position,
       {
-          duration:time_slide,
+          duration:0.0078,
           x:  -0.9,
-          y: -FLOOR_HEIGHT *(NB_FLOORS - 1) ,
+          y: -FLOOR_HEIGHT *(NB_FLOORS +3) ,
           z:1
       },0
     

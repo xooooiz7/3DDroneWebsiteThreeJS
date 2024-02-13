@@ -1,5 +1,8 @@
 import { Scroll } from "@react-three/drei";
-import '../.././App.scss';
+import { PcsSectionComponent } from "./HomePageSectionComponents";
+import './HomePage.scss';
+import { HomePageSectionTwo } from "./HomePageSectionTwo";
+import { HomePageSectionThree } from "./HomePageSectionThree";
 
 export const HomePageSectionOne = () => {
   return (
@@ -24,33 +27,15 @@ export const HomePageSectionOne = () => {
             <p>Our Product</p>
           </button>
         </div>
-        <div className="main-container-Pcs">
-          <div className="container-Pcs">
-            <div className="number-Pcs"><h1>3 Pcs</h1></div>
-            <div className="discription-Pcs">
-              <p>Custom</p>
-              <p>Drone</p>
-            </div>
-          </div>
-          <div className="line-str"></div>
-          <div className="container-Pcs">
-            <div className="number-Pcs"><h1>6 Pcs</h1></div>
-            <div className="discription-Pcs">
-              <p>Our's</p>
-              <p>Drone</p>
-            </div>
-          </div>
-          <div className="line-str"></div>
-          <div className="container-Pcs">
-            <div className="number-Pcs"><h1>2 Pcs</h1></div>
-            <div className="discription-Pcs">
-              <p>Fixed</p>
-              <p>Drone</p>
-            </div>
-          </div>
-        </div>
-        
+        <PcsSectionComponent/>
+        <HomePageSectionTwo/>
+        <hr className="underline"/>
+        <HomePageSectionThree/>
+        <hr className="underline" id="underline-two" />
       </div>
+
+
+      
     </Scroll>
   );
 };

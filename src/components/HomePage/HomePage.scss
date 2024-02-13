@@ -1,0 +1,237 @@
+@import '../../sass/variables';
+// HomePage Section One ///////////////////////////
+
+.underline{
+    width: 90vw;
+    margin-left: 5vw;
+    margin-top: 10vh;
+}
+#underline-two{
+    margin-top: -14vh;
+}
+.nav-bar-container{
+    background-color: $nav-color;
+    display: flex;
+    height: 8vh;
+    padding-top: 2vh;
+}
+.nav-bar-link{
+    margin-left: 45vw;
+}
+.nav-bar-logo{
+    margin-left: 15vw;
+}
+.nav-bar-link a , .nav-bar-logo a{
+    padding-right: 2vw;
+    position: relative;
+    color: $font-white-color
+}
+
+.first-container{
+    width: 60vw;
+    height: 80vh;
+}
+.welcome-text{
+    height: 45vh;
+    padding-top: 3vh;
+}
+.welcome-text h1{
+    color: $font-white-color;
+    font-size: 5vw;
+    font-weight: 400;
+}
+#welcome-text-custom{
+    color: $font-orange-color;
+}
+
+.discription-text{
+    height: 5vh;
+    margin-top: 1vh;
+}
+.discription-text h4{
+    font-size: 1vw;
+    font-weight: 400;
+    color: $font-white-color;
+}
+.container-discription{
+    margin-top: 5vh;
+    height: 5vh;
+}
+.button-main{
+    display: flex;
+    height: 5vh;
+}
+.make-your-own-btn{
+    background-color: $font-orange-color;
+}
+.our-product-btn{
+    background: none;
+    border: 1px solid $font-orange-color;
+    margin-left: 2vw;
+}
+.our-product-btn ,.make-your-own-btn {
+    width: 8vw;
+    height: 4.15vh;
+    border-radius: 2.5vh;
+    margin-top: 0.8vh;
+
+} 
+.our-product-btn p ,.make-your-own-btn p {
+    font-size: 0.85vw;
+} 
+.our-product-btn p{
+    color: $font-white-color
+}
+.main-container-Pcs{
+    display: flex;
+    margin-top: 2vw;
+}
+.number-Pcs h1{
+    font-size: 1.9vw;
+    color: $font-white-color;
+    padding-left: 2vw;
+
+}
+.discription-Pcs p{
+    font-size: 0.9vw;
+    color: $font-white-color;
+    padding-left: 2vw;
+
+}
+.line-str{
+    border-left: 2px solid $font-orange-color;
+    height: 10vh;
+    margin-left: 2vw;
+    margin-top: 1vh;
+}
+.main-container-Pcs{
+    margin-left: 7vw;
+}
+.welcome-text h1 , .discription-text h4 ,.make-your-own-btn {
+    margin-left: 9vw;
+}
+
+// HomePage Section Two ///////////////////////////
+.HomePageContainerSectionTwo{
+    height: 30vh;
+    margin-top: 88vh;
+    width: 100vw;
+    height: 35vh;
+}
+.AboutUsMain{
+    display: flex;
+    margin-left: 42vw;
+}
+.AboutUsMain h1 , .AboutUsMain h4 {
+    font-size: 3vw;
+    font-weight: 200;
+}
+.AboutUsMain h1 {
+    color: $font-white-color;
+}
+#text-orange-aboutUsMain{
+    margin-left: 1vw;
+    color: $font-orange-color;
+}
+.AboutUsOne , .AboutUsTwo {
+    margin-left: 28vw;
+    margin-top: 1.3vh;
+    width: 43vw;
+}
+.AboutUsOne p, .AboutUsTwo p{
+    font-size: 1.16vw;
+    color: $font-white-color;
+    font-weight: 200;
+}
+
+// HomePage Section Three ///////////////////////////
+
+.HomePageContainerSectionThree{
+    width: 100vw;
+    height: 100vh;
+    margin-top: 15vh;
+
+}
+.title-wwhd{
+    display: flex;
+    width: 70vw;
+    margin-left: 15vw;
+}
+.title-wwhd h1{
+    font-size: 3vw;
+    font-weight: 200;
+    color: $font-white-color;
+}
+#orange-title-wwhd{
+    color:$font-orange-color
+}
+.Pcs-sectionThree{
+    margin-left: 28vw;
+    // background-color: rgb(65, 83, 66);
+    margin-top: 10vh;
+    width: 50vw;
+}
+.mainBoxContainer{
+    box-shadow: 7px 7px rgba(0, 0, 0, 0.087);
+    background-color: $background-color-white;
+    border-radius: 22px;
+    width: 15vw;
+    height: 38vh;
+}
+.detail-top{
+    background-color: #8f3e27ec;
+    border-radius: 20px 20px 1px 1px;
+    height: 24vh;
+}
+.detail-down{
+    height: 13vh;
+    border-radius: 1px 1px 20px 20px;
+
+}
+.text-down{
+    display: flex;
+    padding-left: 1vw;
+    padding-top: 0.7vh;
+}
+.text-right-down{
+    margin-left: 1.8vw;
+}
+.buy-now , .View-more , .text-left-down p , .text-right-down p{
+    font-size: 0.8vw;
+    font-weight: 400;
+
+}
+#prices-text-left-down{
+    font-size: 1vw;
+    font-weight: 500;
+}
+.buy-now , .View-more{
+    border-radius: 18px;
+    height: 3.5vh;
+    width: 6.5vw;
+    margin-top: 0.6vh;
+}
+.buy-now{
+    margin-left: 0.7vw;
+    color: $font-white-color;
+    border: 0.9px solid $font-orange-color;
+    background-color: $font-orange-color;
+
+}
+.View-more{
+    margin-left: 0.3vw;
+    border: 0.9px solid $font-orange-color;
+
+}
+.detail-top p {
+    margin-left: 6vw;
+    padding-top: 2vw;
+}
+.main-box-components{
+    display: flex;
+    margin-left: 16vw;
+    margin-top: 11vh;
+}
+.box-components{
+    margin-left: 5vw
+}
