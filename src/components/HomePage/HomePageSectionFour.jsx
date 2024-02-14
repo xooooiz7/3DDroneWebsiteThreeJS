@@ -57,7 +57,7 @@ export const HomePageSectionFour = () => {
                     <p>© 2024 Company</p>
                 </div>
                 <div className="line-3-box-3">
-                    <p>Facebook   Discord   Instagram</p>
+                    <p>Facebook    Discord    Instagram</p>
                 </div>
             </div>
       </div>

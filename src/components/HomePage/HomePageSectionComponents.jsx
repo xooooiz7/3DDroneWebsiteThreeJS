@@ -1,4 +1,5 @@
 import './HomePage.scss';
+import React, { useEffect } from 'react';
 
 export const HomePageSectionNav = () => {
     return (
@@ -18,9 +19,30 @@ export const HomePageSectionNav = () => {
     );
   };
 export const MainBoxComponent = () => {
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        console.log(entry);
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        } else {
+          entry.target.classList.remove('show');
+        }
+      });
+    });
+
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach((el) => observer.observe(el));
+
+    return () => {
+      hiddenElements.forEach((el) => observer.unobserve(el));
+    };
+  }, []); 
+
   return(
+    <section className='hidden'>
     <div className="mainBoxContainer">
-            <div className="detail-top"><p>Image</p></div>
+            <div className="detail-top"><p></p></div>
             <div className="detail-down">
                 <div className="text-down">
                   <div className="text-left-down">
@@ -40,6 +62,8 @@ export const MainBoxComponent = () => {
                 </div>
             </div>
         </div>
+    </section>
+    
   )
 }
 export const PcsSectionComponent = () => {

@@ -6,10 +6,8 @@ import { Color } from "three";
 import { useScroll } from '@react-three/drei';
 import React, { useEffect } from 'react';
 
-
-  
 export const HomePageSectionTwo = () => {
-    
+
   return (
       <div className="HomePageContainerSectionTwo">
         <div className="AboutUsMain">

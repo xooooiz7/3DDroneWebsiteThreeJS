@@ -10,6 +10,7 @@ export const NB_FLOORS = 5;
 
 export const time_slide = 0.01;
 
+
 export function FullDroneModel(props) {
 
   const { nodes, materials } = useGLTF('./models/modelwithcolor.glb')

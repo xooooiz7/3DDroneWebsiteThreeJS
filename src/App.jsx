@@ -7,7 +7,6 @@ import './App.scss';
 import { HomePageSectionNav } from './components/HomePage/HomePageSectionComponents'
 
 function App() {
-
   return (
     <>
      <HomePageSectionNav/>

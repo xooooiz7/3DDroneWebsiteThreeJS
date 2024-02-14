@@ -314,3 +314,31 @@
     border: 1px solid rgb(190, 90, 63);
     color: $font-white-color;
 }
+
+// Animation Scroll ///////////////////
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+@media(prefers-reduced-motion){
+    .hidden{
+        transition: none;
+    }
+}
+
+
+.sent-data svg{
+    color: $font-orange-color;
+}
+.sent-data{
+    margin-left: 50vw;
+    margin-top: 4vh;
+}
