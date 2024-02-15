@@ -7,6 +7,7 @@ import { HomePageSectionFour } from "./HomePageSectionFour";
 import React, { useState , createContext  } from 'react';
 import logo from "../../assets/chevron-down.svg";
 
+
 export const HomePageSectionOne = ({ updateValue }) => {
   const [buttonVisible, setButtonVisible] = useState(true);
 
@@ -20,7 +21,7 @@ export const HomePageSectionOne = ({ updateValue }) => {
 
   return (
     <Scroll html >
-      <div className="first-container">
+        <div className="first-container">
         <div className="welcome-text">
           <h1>Build Your</h1>
           <h1 id="welcome-text-custom">Custom</h1>
@@ -31,10 +32,13 @@ export const HomePageSectionOne = ({ updateValue }) => {
             <h4>Make your own Drone with Us !!</h4>
           </div>
         </div>
+        
         <div className="button-main">
-          <button className="make-your-own-btn">
-            <p>Make Your Own</p>
-          </button>
+          <a href="/CustomPage">
+            <button className="make-your-own-btn">
+              <p>Make Your Own</p>
+            </button>
+          </a>
           <button className="our-product-btn">
             <p>Our Product</p>        
           </button>
@@ -57,9 +61,6 @@ export const HomePageSectionOne = ({ updateValue }) => {
         <hr className="underline" id="underline-two" />
         <HomePageSectionFour/>
       </div>
-
-
-      
     </Scroll>
   );
 };
