@@ -1,3 +1,6 @@
+// Experinece /////////////////////
+
+
 import './CustomPage.scss';
 import React, { useEffect } from 'react';
 import { Suspense } from 'react';
@@ -9,7 +12,6 @@ import {
    Stage,
  } from "@react-three/drei";
 
-// Experinece Page On Video
 export const CustomPage = () => {
 
     return (
