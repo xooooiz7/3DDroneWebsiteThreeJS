@@ -1,11 +1,34 @@
 import './CustomPage.scss';
 import React, { useEffect } from 'react';
+import { Suspense } from 'react';
+import Chair from './Chair';
 
+import {
+   MeshReflectorMaterial,
+   PresentationControls,
+   Stage,
+ } from "@react-three/drei";
+
+// Experinece Page On Video
 export const CustomPage = () => {
+
     return (
-     <div className="CustomPageContainer">
-        <h1>Welcome to CustomPage</h1>
-     </div>
+      <>
+      <PresentationControls
+        speed={1.5}
+        global
+        zoom={0.7}
+        polar={[-0.1, Math.PI / 4]}
+      >
+        <Stage environment="city" intensity={0.6} castShadow={false}>
+               <Chair />
+          <boxGeometry />
+        </Stage>
+        <mesh rotation={[-Math.PI / 2, 0, 0]}>
+          
+        </mesh>
+      </PresentationControls>
+    </>
     )
   }
   
