@@ -1,9 +1,13 @@
 import { createContext, useContext } from "react";
 import { useState } from "react";
+
+//ใช้ในการจัดการสถานะของ customization ของแอปพลิเคชัน
+
 const CustomizationContext = createContext({});
 
 export const CustomizationProvider = (props) => {
-    const [meterial , setMeterial] = useState('leather');
+    //ฟังก์ชันส่งค่าไป หน้า interface เพื่อส่งไปหา Chair (สำหรับตัว Wrap)
+    const [meterial , setMeterial] = useState('leather'); 
     return <CustomizationContext.Provider value={{
         meterial , setMeterial
     }}>

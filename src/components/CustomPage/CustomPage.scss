@@ -8,3 +8,27 @@
    padding-left: 48vw;
     
 }
+
+.configurator{
+    position: fixed;
+    right: 24px;
+    width: 320px;
+    bottom:25vh ;
+    color: white;
+}
+.configurator__section__title{
+    text-transform: uppercase;
+}
+.configurator__section__values{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 24px;
+}
+.item__label{
+    font-size: 15px;
+}
+.item:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}

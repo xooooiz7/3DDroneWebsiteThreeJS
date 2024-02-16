@@ -2,9 +2,12 @@
 import React, { useRef } from 'react'
 import { useGLTF, useTexture } from '@react-three/drei'
 import * as THREE from "three";
+import { useCustomization } from '../../contexts/Customization';
 
 //มีการปรับเปลี่ยนการ export เพื่อให้สามารถรับ prop ได้ง่ายขึ้น
 const Chair = (props) =>{
+
+  const {meterial} = useCustomization() // เป้นตัวแปรจากไฟล์ Customize ส่งค่าโดยใช้ useState
   const { nodes, materials } = useGLTF('./models/chair.gltf') ; 
 
 
@@ -55,7 +58,7 @@ const Chair = (props) =>{
   return (
     <group {...props} dispose={null} >
       <mesh geometry={nodes.Chair.geometry}>
-        <meshStandardMaterial {...leatherTextureProps}/>
+        <meshStandardMaterial {...(meterial === "leather" ? leatherTextureProps : fabricTextureProps)}/>
       </mesh>
       <mesh geometry={nodes.Cushion.geometry} position={[0, 0.06, 0.04]} >
         <meshStandardMaterial {...fabricTextureProps}/>
