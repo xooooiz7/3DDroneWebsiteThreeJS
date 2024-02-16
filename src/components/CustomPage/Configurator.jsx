@@ -3,18 +3,18 @@ import { useCustomization } from '../../contexts/Customization';
 import './CustomPage.scss';
 
 
-//หน้าสำหรับการวางโครง ตัว Wrap
+//หน้าสำหรับการวางโครง UI interface ให้ user กด 
 
 const Configurator = () => {
-    const {meterial , setMeterial} = useCustomization(); 
-
+    const {meterial , setMeterial , legs , setLegs} = useCustomization(); 
+    console.log("legs " , legs)
     return <div className="configurator">
         <div className="configurator__section">
             <div className="configurator__section__title">
                 Chair meterial
             </div>
             <div className="configurator__section__values">
-                
+
                 {/* ถ้า material เท่ากับ "leather" จะถูกเพิ่มคลาส "item--active" เข้าไป */}
                 <div className={`item ${meterial === "leather" ? "item--active" : ""}`} onClick={() => setMeterial("leather")}>
                     <div className="item__label">
@@ -24,6 +24,28 @@ const Configurator = () => {
                 <div className={`item ${meterial === "fabric" ? "item--active" : ""}`} onClick={() => setMeterial("fabric")}>
                     <div className="item__label">
                         Fabric
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        {/* ปุ่มสำหรับการเปลี่ยนขา */}
+        <div className="configurator__section">
+            <div className="configurator__section__title">
+                Legs
+            </div>
+            <div className="configurator__section__values">
+                
+                {/* ถ้า material เท่ากับ "leather" จะถูกเพิ่มคลาส "item--active" เข้าไป */}
+                <div className={`item ${legs === 1 ? "item--active" : ""}`} onClick={() => setLegs(1)}>
+                    <div className="item__label">
+                        Legs 1
+                    </div>
+                </div>
+                <div className={`item ${legs === 2 ? "item--active" : ""}`} onClick={() => setLegs(2)}>
+                    <div className="item__label">
+                        Legs 2
                     </div>
                 </div>
 

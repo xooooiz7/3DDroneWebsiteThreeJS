@@ -7,7 +7,7 @@ import { useCustomization } from '../../contexts/Customization';
 //มีการปรับเปลี่ยนการ export เพื่อให้สามารถรับ prop ได้ง่ายขึ้น
 const Chair = (props) =>{
 
-  const {meterial} = useCustomization() // เป้นตัวแปรจากไฟล์ Customize ส่งค่าโดยใช้ useState
+  const {meterial,legs} = useCustomization() // เป้นตัวแปรจากไฟล์ Customize ส่งค่าโดยใช้ useState
   const { nodes, materials } = useGLTF('./models/chair.gltf') ; 
 
 
@@ -66,9 +66,11 @@ const Chair = (props) =>{
 
       {/* ตอนปั้น Model เขาปั้นมา 2 ขา
       ขา 1  */}
-      <mesh geometry={nodes.Legs1.geometry} material={materials.Legs} />
+
+      {/* รับค่ามา visible จาก config */}
+      <mesh geometry={nodes.Legs1.geometry} material={materials.Legs} visible={legs===1} />
       {/* ขา 2 ปิดการมองเห็นโดยใช้คำสั่ง visible = false */}
-      <mesh geometry={nodes.Legs2.geometry} material={materials.Legs} visible={false} />
+      <mesh geometry={nodes.Legs2.geometry} material={materials.Legs} visible={legs===2} />
     </group>
   )
 }
