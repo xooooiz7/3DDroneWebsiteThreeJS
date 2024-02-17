@@ -1,13 +1,15 @@
 import { Material } from 'three';
-import { useCustomization } from '../../contexts/Customization';
+import { chairColors, useCustomization } from '../../contexts/Customization';
 import './CustomPage.scss';
 
 
 //หน้าสำหรับการวางโครง UI interface ให้ user กด 
 
 const Configurator = () => {
-    const {meterial , setMeterial , legs , setLegs} = useCustomization(); 
-    console.log("legs " , legs)
+    const {meterial , setMeterial , legs , setLegs ,chairColor ,
+             setChairColor,cushionColor , setCushionColor} = useCustomization(); 
+
+
     return <div className="configurator">
         <div className="configurator__section">
             <div className="configurator__section__title">
@@ -30,6 +32,32 @@ const Configurator = () => {
             </div>
         </div>
 
+        {/* หน้าสำหรับการเลือกสี (setChairColor) */}
+        <div className="configurator__section">
+            <div className="configurator__section__title">
+                Chair Colour
+            </div>
+            <div className="configurator__section__values">
+
+            {/* Map ค่าจาก chairColor Array แล้วเอาค่าทั้งหมด มาทำเป็น interface */}
+            
+            { chairColors.map((item , index) => (
+                <div key={index} className={`item ${item.color === chairColor.color ? "item--active" : ""}`} 
+                onClick={() => setColor(item)}>
+                <div className="item__dot" style={{
+                    backgroundColor:item.color,
+                }}/>
+                <div className="item__label"> {item.name}</div>
+            </div>
+            ))
+            
+            }
+                
+               
+                
+
+            </div>
+        </div>
         {/* ปุ่มสำหรับการเปลี่ยนขา */}
         <div className="configurator__section">
             <div className="configurator__section__title">
