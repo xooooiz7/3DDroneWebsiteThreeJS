@@ -26,8 +26,9 @@
 .configurator__section__values{
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 32px;
     margin-top: 24px;
+    flex-wrap: wrap;
 }
 .item__label{
     font-size: 15px;
