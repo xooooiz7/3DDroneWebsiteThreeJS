@@ -67,21 +67,16 @@
     margin-top: 2vh;
     height: 80vh;
     width: 24vw;
-    //เอาออกด้วยยย
-    position: relative;
-    right: 7vw;
-    top: 20vh; 
-    //เอาออกด้วยยย
-    //เอาออกด้วยยย   
-    //เอาออกด้วยยย
-    //เอาออกด้วยยย
-    //เอาออกด้วยยย
+    align-items: center;
+    justify-content: center;
+    
 }
 
 
 .navbar a {
   text-decoration: none;
   color: #333;
+  font-size: 0.9vw;
   
 }
 .navbar li {
@@ -91,10 +86,17 @@
     border-radius: 6px;
     box-shadow: 0px 2.5px rgba(0, 0, 0, 0.27);
     width: 6vw;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0.8vh;
+    height: 4vh;
 }
   
 .navbar li.active {
     background-color: #793825;
+}
+.navbar li{
+    transition: all 0.3s ease;
 }
 .navbar li:hover {
     background-color: #a34c32;
@@ -151,11 +153,13 @@
 #arrow-btn-right , #arrow-btn-left{
     box-shadow: 0px 4px rgba(0, 0, 0, 0.309);
     border-radius: 50%;
+    transition: all 0.3s ease;
+
 }
 #arrow-btn-right:hover , #arrow-btn-left:hover{
     box-shadow: 0px 4px rgba(0, 0, 0, 0.309);
     border-radius: 50%;
-    color: rgb(235, 235, 235);
+    color: rgb(213, 213, 213);
 }
 .title-card-slider h1 {
     margin-left: 3vw;
@@ -189,15 +193,95 @@
     cursor: pointer;
 }
 .InnerBox{
-    background-color: rgba(255, 0, 0, 0.247);
     width: 10vw;
     border-radius: 1.2vw  ;
     height: 14.5vh;
     margin: 0.6vh;
+    transition: opacity 0.3s ease; /* Add a transition for the opacity property */
+
 }
 .InnerBox img{
     background-position: center;
     background-size: cover;
     border-radius: 1.2vw;
     padding-top: 1vh;
+    max-width: 10vw;
+    max-height: 14.5vh;
+    margin: auto;
+    
+}
+.BoxComponent:hover .InnerBox{
+    cursor: pointer;
+    opacity: 0.9;
+    
+}
+/// scroll bar ///
+::-webkit-scrollbar{
+    width: 0.5vw;
+    border-radius:10px;
+
+}
+
+::-webkit-scrollbar-track{
+    background: #D9D9D9;
+    border-radius:10px;
+
+}
+::-webkit-scrollbar-thumb{
+    background: $orange-slide-background;
+    border-radius:10px;
+}
+.toggle-btn{
+    background-color: red;
+}
+.all-slider-container {
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Add smooth transition effect */
+    opacity: 1; /* Initial opacity */
+
+  }
+  .slider-content {
+    opacity: 1; /* Initial opacity */
+  }
+  
+  .open {
+    transform: translateX(0);
+  }
+  
+  .closed .slider-content {
+    opacity: 0; /* Set opacity to 0 when closed */
+    transition: opacity 0.3s ease; /* Add smooth transition effect for opacity */
+
+  }
+//   .closed .box-a-slide{
+//     transform: translateX(100%);
+
+//   }
+  .closed{
+    transform: translateX(100%);
+
+  }
+
+.toggle-button{
+    height: 6vw;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    bottom: 2vh;
+    background-color:#4F5054;
+    width: 1.75vw;
+    height: 6vw;
+    border-radius: 10px;
+}
+.box-a-slide{
+    width: 1.75vw;
+    height: 6vw;
+    border-radius: 10px;
+    margin-top: 40vh;
+}
+.slide-top{
+    width: 100vw;
+    position: relative;
+    top: 20vh;
+    right: 10vw;
+    display: flex;
 }
