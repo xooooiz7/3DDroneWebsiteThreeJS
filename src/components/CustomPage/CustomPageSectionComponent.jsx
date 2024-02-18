@@ -3,23 +3,14 @@ import React, { useRef, useState, useEffect } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
+import dataset_model from './DatasetModel'
 
 export const SliderComponent = () => {
     const sliderRef = useRef(null); 
 
-    const cardTitles = ["Model", "Colors", "Free","Free"];
-    
-    const dataset = [
-      {
-        numOfBoxes: 4,
-        imageProps: ["imageA","imageB", "imageC", "imageD"],
-        namesProp: ["a","b","c", "d"],
-        pricesProp: [1,2, 3, 4],
-      },
-    ];
+    const cardTitles = ["Model", "Wings", "Battery","Legs"];
   
-    const comsTitles  = dataset.map((data, index) => (
+    const comsTitles  = dataset_model.map((data, index) => (
       <BoxComponent
         key={index}
         numOfBoxes={data.numOfBoxes}
@@ -84,8 +75,6 @@ export const SliderComponent = () => {
                 </ul>
                 <div className="spaceInside" >
                   {comsTitles[index]}
-
-                  
                 </div>
               </nav>
             </div>
@@ -122,44 +111,28 @@ const BoxComponent = ({ numOfBoxes , imageProps, namesProp, pricesProp }) => {
     padding: '1vh'
   };
 
-  const createBoxes = (count) => {
-    const boxes = [];
-    console.log('count' , count)
-    
-    for (let i = 0; i < count; i++) {
-      boxes.push(
-        <div key={i} style={boxStyle}>
-          <div style={{ boxShadow: '0px 4px rgba(0, 0, 0, 0.2)', marginTop: '-1vh', width: '10.7vw', height: '78%', backgroundColor: '#E2E3E3', borderRadius: '1.2vw' }}>
-            <div className="InnerBox">
-              {imageProps[i]}
-              
-            </div>
-          </div>
-          <div style={{ textAlign: 'center', fontSize: '0.8em' }}>
-            {/* Description */}
-            <div className="Description-Boxes">
-              {/* Use the namesProp and pricesProp dynamically */}
-              <h4>{namesProp[i]}</h4>
-              <div className="description-under">
-              <p>{pricesProp[i]}</p>
-              </div>
-            </div>
+  const createBox = (key) => (
+    <div key={key} style={boxStyle}>
+      <div style={{ boxShadow: '0px 4px rgba(0, 0, 0, 0.2)', marginTop: '-1vh', width: '10.7vw', height: '78%', backgroundColor: '#E2E3E3', borderRadius: '1.2vw' }}>
+        <div className="InnerBox">{imageProps[key]}</div>
+      </div>
+      <div style={{ textAlign: 'center', fontSize: '0.8em' }}>
+        <div className="Description-Boxes">
+          <h4>{namesProp[key]}</h4>
+          <div className="description-under">
+            <p>{pricesProp[key]}</p>
           </div>
         </div>
-      );
-    }
-    return boxes;
-  };
+      </div>
+    </div>
+  );
+  
+  const createBoxes = (count, start) => Array.from({ length: count }, (_, index) => createBox(start + index));
 
   return (
-
     <div style={{ display: 'flex' }}>
-      <div style={{ width: '24vw' }}>
-        {createBoxes(boxesInColumn1 )}
-      </div>
-      <div style={{ width: '24vw' }}>
-        {createBoxes(boxesInColumn2)}
-      </div>
+      <div style={{ width: '24vw' }}>{createBoxes(boxesInColumn1, 0)}</div>
+      <div style={{ width: '24vw' }}>{createBoxes(boxesInColumn2, boxesInColumn1)}</div>
     </div>
   );
 };
