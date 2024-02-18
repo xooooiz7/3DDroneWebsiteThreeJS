@@ -135,6 +135,8 @@
     border: 1px solid rgba(255, 255, 255, 0);
     border-radius: 0px 0px 13px 13px;
     background-color: #61636B;
+    overflow-y: scroll;
+    overflow-x: hidden;
 
 }
 .Arrow-all{
@@ -158,4 +160,44 @@
 .title-card-slider h1 {
     margin-left: 3vw;
     width: 12vw;
+}
+.Description-Boxes{
+    width: 8.8vw;
+    height: 5vh;
+    padding-top: 0.4vh;
+    text-align: left;
+    
+}
+.Description-Boxes h4{
+    font-size: 0.85vw;
+    color: #000000;
+    font-weight: 500;
+}
+.description-under p{
+    font-weight: 200;
+    color: #000000;
+}
+.description-under{
+    display: flex;
+    justify-content:space-between;
+}
+.description-info{
+    opacity: 0.5;
+}
+.description-info:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+.InnerBox{
+    background-color: rgba(255, 0, 0, 0.247);
+    width: 10vw;
+    border-radius: 1.2vw  ;
+    height: 14.5vh;
+    margin: 0.6vh;
+}
+.InnerBox img{
+    background-position: center;
+    background-size: cover;
+    border-radius: 1.2vw;
+    padding-top: 1vh;
 }
