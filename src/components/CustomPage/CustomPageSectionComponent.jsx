@@ -9,7 +9,8 @@ export const SliderComponent = () => {
     const sliderRef = useRef(null); 
 
     const cardTitles = ["Model", "Colors", "Free","Free"];
-
+    const comsTitles = [<BoxComponent numOfBoxes={1}/> , <BoxComponent numOfBoxes={2}/> ,<BoxComponent numOfBoxes={3}/> ,<BoxComponent numOfBoxes={4}/>]
+    
     const settings = {
       infinite: true,
       speed: 0,
@@ -37,6 +38,7 @@ export const SliderComponent = () => {
         </div>
         <Slider ref={sliderRef} {...settings}>
           {cardTitles.map((title, index) => (
+
             <div key={index} className="full-page-card">
               <div className="title-card-slider">
                 <h1>{title}</h1>
@@ -56,27 +58,24 @@ export const SliderComponent = () => {
               <nav className="navbar">
                 <ul className='Slider-container'>
                   {cardTitles.map((navTitle, navIndex) => (
-                    <li key={navIndex} className={index === navIndex ? 'active' : ''}>
-                      <a
-                        id='name-title-click'
-                        onClick={() => goToSlide(navIndex)}
-                        href="#"
-                        className={index === navIndex ? 'active' : ''}
-                      >
+                    <li onClick={() => goToSlide(navIndex)} key={navIndex} className={index === navIndex ? 'active' : ''}>
+                      <a id='name-title-click' href="#">
                         {navTitle}
                       </a>
                     </li>
                   ))}
                 </ul>
-                <div className="spaceInside">
-                  Scroll Space use
+                <div className="spaceInside" >
+                {comsTitles[index]}
+
+                  
                 </div>
               </nav>
             </div>
           ))}
         </Slider>
         <div className="arrow-container">
-          
+
         </div>
       </div>
 
@@ -84,3 +83,52 @@ export const SliderComponent = () => {
     )
 }
   
+const BoxComponent = ({ numOfBoxes }) => {
+  const boxesInColumn1 = Math.ceil(numOfBoxes / 2);
+  const boxesInColumn2 = numOfBoxes - boxesInColumn1;
+
+  const boxStyle = {
+    width: '10vw',
+    height: '19.5vh',
+    margin: '1vw', 
+    backgroundColor: '#FFFFFF', 
+    borderRadius: '1.2vw',
+    boxShadow: '0 4px 9px rgba(0, 0, 0, 0.6)', 
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: '1vh', // Adjust as needed
+  };
+
+  const createBoxes = (count) => {
+    const boxes = [];
+    for (let i = 0; i < count; i++) {
+      boxes.push(
+        <div key={i} style={boxStyle}>
+          <div style={{ marginTop: '-1vh' ,width: '10vw', height: '75%', backgroundColor: 'lightblue', borderRadius: '1.2vw' }}>
+            {/* Inner Box */}
+          </div>
+          <div style={{ textAlign: 'center', fontSize: '0.8em' }}>
+            {/* Description */}
+            Line 1 Description
+            <br />
+            Line 2 Description
+          </div>
+        </div>
+      );
+    }
+    return boxes;
+  };
+
+  return (
+    <div style={{ display: 'flex' }}>
+      <div style={{ width: '24vw' }}>
+        {createBoxes(boxesInColumn1)}
+      </div>
+      <div style={{ width: '24vw' }}>
+        {createBoxes(boxesInColumn2)}
+      </div>
+    </div>
+  );
+};
