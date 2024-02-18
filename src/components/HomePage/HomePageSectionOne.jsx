@@ -15,8 +15,6 @@ export const HomePageSectionOne = ({ updateValue }) => {
     let newValue = 1.7;
     updateValue(newValue);
     setButtonVisible(false);
-  
-
 };
 
   return (

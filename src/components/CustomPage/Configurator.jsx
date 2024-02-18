@@ -1,13 +1,13 @@
 import { Material } from 'three';
 import { chairColors, cushionColors, useCustomization } from '../../contexts/Customization';
 import './CustomPage.scss';
-
+import { SliderComponent } from './CustomPageSectionComponent';
 
 //หน้าสำหรับการวางโครง UI interface ให้ user กด 
 
 const Configurator = () => {
     const {meterial , setMeterial , legs , setLegs ,chairColor ,
-             setChairColor,cushionColor , setCushionColor} = useCustomization(); 
+           setChairColor,cushionColor , setCushionColor} = useCustomization(); 
 
 
     return <div className="configurator">
@@ -94,6 +94,8 @@ const Configurator = () => {
 
             </div>
         </div>
+        <SliderComponent/>
+
     </div>
 } ; 
 

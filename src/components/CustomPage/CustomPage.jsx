@@ -5,6 +5,7 @@ import './CustomPage.scss';
 import React, { useEffect } from 'react';
 import { Suspense } from 'react';
 import Chair from './Chair';
+import Table from './Table' ;
 
 import {
    MeshReflectorMaterial,
