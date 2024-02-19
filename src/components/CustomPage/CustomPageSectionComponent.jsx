@@ -4,10 +4,13 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import dataset_model from './DatasetModel'
+import { chairColors, cushionColors, useCustomization } from '../../contexts/Customization';
 
 export const SliderComponent = () => {
     const sliderRef = useRef(null); 
     const [isSliderOpen, setIsSliderOpen] = useState(true);
+ 
+
     const toggleSlider = () => {
       setIsSliderOpen(!isSliderOpen);
     };
@@ -73,12 +76,8 @@ export const SliderComponent = () => {
           </div>
 
           <div className="box-b-slide">
-
             <div className={`all-slider-container ${isSliderOpen ? 'open' : 'closed'}`}>
-              
               <div className="slider-content">
-
-              
                 <div className="arrow-container">
                 </div>
                 <Slider ref={sliderRef} {...settings}>
@@ -118,15 +117,11 @@ export const SliderComponent = () => {
                   ))}
                 </Slider>
                 <div className="arrow-container">
-
                 </div>
                 </div>
               </div>
-
-            
           </div>
         </div>
-          
           
 
     </>
@@ -136,8 +131,9 @@ export const SliderComponent = () => {
 const BoxComponent = ({ numOfBoxes , imageProps, namesProp, pricesProp }) => {
   const boxesInColumn1 = (Math.ceil(numOfBoxes / 2));
   const boxesInColumn2 = (numOfBoxes - boxesInColumn1);
-  console.log("boxesInColumn1" , boxesInColumn1)
-  console.log("boxesInColumn2" , boxesInColumn2)
+  const {meterial , setMeterial , legs , setLegs ,chairColor ,
+    setChairColor,cushionColor , setCushionColor} = useCustomization(); 
+
 
   const boxStyle = {
     width: '10.7vw',
@@ -156,8 +152,11 @@ const BoxComponent = ({ numOfBoxes , imageProps, namesProp, pricesProp }) => {
   };
 
   const createBox = (key) => (
+    
     <div key={key} style={boxStyle} className='BoxComponent'>
-      <div style={{ boxShadow: '0px 4px rgba(0, 0, 0, 0.2)', marginTop: '-1vh', width: '10.7vw', height: '78%', backgroundColor: '#E2E3E3', borderRadius: '1.2vw' }}>
+      <div className={`item ${legs === 1 ? "item--active" : ""}`} 
+        onClick={() => {setLegs(key+1) , console.log("key" , key+1)} } style={{ boxShadow: '0px 4px rgba(0, 0, 0, 0.2)', marginTop: '-1vh', width: '10.7vw', height: '78%', backgroundColor: '#E2E3E3', borderRadius: '1.2vw' }}>
+        
         <div className="InnerBox" >
           <img src={imageProps[key]} alt="" />
         </div>

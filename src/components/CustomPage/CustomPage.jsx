@@ -5,7 +5,7 @@ import './CustomPage.scss';
 import React, { useEffect } from 'react';
 import { Suspense } from 'react';
 import Chair from './Chair';
-import Table from './Table' ;
+import { MainFrame } from './MainFrame';
 
 import {
    MeshReflectorMaterial,
@@ -20,16 +20,14 @@ export const CustomPage = () => {
       <PresentationControls
         speed={1.5}
         global
-        zoom={0.7}
-        polar={[-0.1, Math.PI / 4]}
+        zoom={0.8}
+        
       >
         <Stage environment="city" intensity={0.6} castShadow={false}>
-               <Chair />
+               <MainFrame scale={3.5} position={[-0.3, 0, 0]}/>
           <boxGeometry />
         </Stage>
-        <mesh rotation={[-Math.PI / 2, 0, 0]}>
-          
-        </mesh>
+        
       </PresentationControls>
     </>
     )

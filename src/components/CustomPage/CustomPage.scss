@@ -271,6 +271,12 @@
     width: 1.75vw;
     height: 6vw;
     border-radius: 10px;
+    transition: all ease 0.25s;
+}
+
+.toggle-button:hover{
+    background-color:#414245;
+
 }
 .box-a-slide{
     width: 1.75vw;
