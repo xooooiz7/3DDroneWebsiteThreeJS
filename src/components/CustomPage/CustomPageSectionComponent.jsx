@@ -3,14 +3,13 @@ import React, { useRef, useState, useEffect } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import dataset_model from './DatasetModel'
+import {dataset_model , cardTitles} from './DatasetModel'
 import { chairColors, cushionColors, useCustomization } from '../../contexts/Customization';
 
 export const SliderComponent = () => {
     const sliderRef = useRef(null); 
     const [isSliderOpen, setIsSliderOpen] = useState(true);
- 
-
+  
     const toggleSlider = () => {
       setIsSliderOpen(!isSliderOpen);
     };
@@ -31,7 +30,6 @@ export const SliderComponent = () => {
     };
 
 
-    const cardTitles = ["Model", "Wings", "Battery","Legs"];
   
     const comsTitles  = dataset_model.map((data, index) => (
       <BoxComponent
@@ -40,6 +38,9 @@ export const SliderComponent = () => {
         imageProps={data.imageProps}
         namesProp={data.namesProp}
         pricesProp={data.pricesProp}
+        FrameName = {data.FrameName}
+        WingName = {data.wingName}
+        slideIndex={index}
       />
     ));
   
@@ -128,7 +129,7 @@ export const SliderComponent = () => {
     )
 }
   
-const BoxComponent = ({ numOfBoxes , imageProps, namesProp, pricesProp }) => {
+const BoxComponent = ({ numOfBoxes , imageProps, namesProp, pricesProp , slideIndex ,FrameName ,WingName}) => {
   const boxesInColumn1 = (Math.ceil(numOfBoxes / 2));
   const boxesInColumn2 = (numOfBoxes - boxesInColumn1);
   const {meterial , setMeterial , legs , setLegs ,chairColor ,
@@ -151,11 +152,23 @@ const BoxComponent = ({ numOfBoxes , imageProps, namesProp, pricesProp }) => {
     padding: '1vh'
   };
 
-  const createBox = (key) => (
+
+  const createBox = (key,slideIndex) => (
     
     <div key={key} style={boxStyle} className='BoxComponent'>
-      <div className={`item ${legs === 1 ? "item--active" : ""}`} 
-        onClick={() => {setLegs(key+1) , console.log("key" , key+1)} } style={{ boxShadow: '0px 4px rgba(0, 0, 0, 0.2)', marginTop: '-1vh', width: '10.7vw', height: '78%', backgroundColor: '#E2E3E3', borderRadius: '1.2vw' }}>
+      <div  className={`item ${meterial === "FrameA" ? "item--active" : ""} ${legs === "" ? "item--active" : ""}`}
+      
+      onClick={() => {
+        if (slideIndex === 0) {
+          setMeterial(FrameName[key]);
+        }
+        if (slideIndex === 1) {
+          setLegs(WingName[key]);
+        }
+      }}
+      
+      style={{ boxShadow: '0px 4px rgba(0, 0, 0, 0.2)', marginTop: '-1vh', width: '10.7vw', height: '78%', backgroundColor: '#E2E3E3', borderRadius: '1.2vw' }}>
+
         
         <div className="InnerBox" >
           <img src={imageProps[key]} alt="" />
@@ -164,6 +177,7 @@ const BoxComponent = ({ numOfBoxes , imageProps, namesProp, pricesProp }) => {
       <div style={{ textAlign: 'center', fontSize: '0.8em' }}>
         <div className="Description-Boxes">
           <h4>{namesProp[key]}</h4>
+
           <div className="description-under">
             <p>{pricesProp[key]}</p>
             <p className="description-info">
@@ -180,7 +194,7 @@ const BoxComponent = ({ numOfBoxes , imageProps, namesProp, pricesProp }) => {
     
   );
   
-  const createBoxes = (count, start) => Array.from({ length: count }, (_, index) => createBox(start + index));
+  const createBoxes = (count, start) => Array.from({ length: count }, (_, index) => createBox(start + index ,slideIndex ));
 
   return (
     <div style={{ display: 'flex' }}>

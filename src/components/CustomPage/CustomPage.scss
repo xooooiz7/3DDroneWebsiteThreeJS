@@ -42,7 +42,6 @@
     border: solid 2px #9999;
 }
 .item:hover{
-    opacity: 0.7;
     cursor: pointer;
 }
 .item{
@@ -185,19 +184,14 @@
     display: flex;
     justify-content:space-between;
 }
-.description-info{
-    opacity: 0.5;
-}
-.description-info:hover{
-    opacity: 0.7;
-    cursor: pointer;
-}
+
+
 .InnerBox{
     width: 10vw;
     border-radius: 1.2vw  ;
     height: 14.5vh;
     margin: 0.6vh;
-    transition: opacity 0.3s ease; /* Add a transition for the opacity property */
+    transition: opacity 0.2s ease; 
 
 }
 .InnerBox img{
@@ -212,7 +206,8 @@
 }
 .BoxComponent:hover .InnerBox{
     cursor: pointer;
-    opacity: 0.9;
+
+    opacity: 0.8;
     
 }
 /// scroll bar ///

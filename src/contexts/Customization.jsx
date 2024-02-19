@@ -80,9 +80,9 @@ const CustomizationContext = createContext({});
 
 export const CustomizationProvider = (props) => {
     //ฟังก์ชันส่งค่าไป หน้า interface เพื่อส่งไปหา Chair (สำหรับตัว Wrap)
-    const [meterial , setMeterial] = useState('leather'); 
+    const [meterial , setMeterial] = useState(''); 
     //ส่งไปหา Chair (สำหรับตัว ขา)
-    const [legs , setLegs] = useState(1); //useState 1 หมายถึง ค่า default
+    const [legs , setLegs] = useState(''); //useState 1 หมายถึง ค่า default
 
 
     //สร้าง useState สำหรับการรับส่งค่า สี (1)
