@@ -6,6 +6,8 @@ import 'slick-carousel/slick/slick-theme.css';
 import {dataset_model , cardTitles} from './DatasetModel'
 import { chairColors, cushionColors, useCustomization } from '../../contexts/Customization';
 
+
+
 export const SliderComponent = () => {
     const sliderRef = useRef(null); 
     const [isSliderOpen, setIsSliderOpen] = useState(true);
@@ -151,12 +153,14 @@ const BoxComponent = ({ numOfBoxes , imageProps, namesProp, pricesProp , slideIn
     justifyContent: 'space-between',
     padding: '1vh'
   };
-
+  
+  const chairColorsArray = chairColors.map(chair => chair.color);
 
   const createBox = (key,slideIndex) => (
     
     <div key={key} style={boxStyle} className='BoxComponent'>
-      <div  className={`item ${meterial === "FrameA" ? "item--active" : ""} ${legs === "" ? "item--active" : ""}`}
+      <div  className={`item ${meterial === "FrameA" ? "item--active" : ""} 
+                      ${legs === "" ? "item--active" : ""} `}
       
       onClick={() => {
         if (slideIndex === 0) {
@@ -164,6 +168,10 @@ const BoxComponent = ({ numOfBoxes , imageProps, namesProp, pricesProp , slideIn
         }
         if (slideIndex === 1) {
           setLegs(WingName[key]);
+        }
+        if(slideIndex === 2){
+          setChairColor(chairColorsArray[key])
+          console.log(chairColorsArray[key])
         }
       }}
       

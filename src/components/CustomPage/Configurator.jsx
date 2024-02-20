@@ -9,7 +9,6 @@ const Configurator = () => {
     const {meterial , setMeterial , legs , setLegs ,chairColor ,
            setChairColor,cushionColor , setCushionColor} = useCustomization(); 
 
-
     return <div className="configurator">
         <div className="configurator__section">
             <div className="configurator__section__title">

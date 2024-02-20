@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export function B_Leg2(props) {
-  const { nodes, materials } = useGLTF('./models/B_Leg2.glb')
+  const { nodes, materials } = useGLTF('./models/Leg/B_Leg2.glb')
   return (
     <group {...props} dispose={null}>
       <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
@@ -27,4 +27,4 @@ export function B_Leg2(props) {
   )
 }
 
-useGLTF.preload('./models/B_Leg2.glb')
+useGLTF.preload('./models/Leg/B_Leg2.glb')
