@@ -4,14 +4,15 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import {dataset_model , cardTitles} from './DatasetModel'
-import { chairColors, cushionColors, useCustomization } from '../../contexts/Customization';
-
-
+import {useCustomization } from '../../contexts/Customization';
+import { chairColors } from './DatasetModel';
+import { FullPalateColor } from './CustomPagePalate';
 
 export const SliderComponent = () => {
     const sliderRef = useRef(null); 
     const [isSliderOpen, setIsSliderOpen] = useState(true);
-  
+    const {isVisible} = useCustomization(); 
+
     const toggleSlider = () => {
       setIsSliderOpen(!isSliderOpen);
     };
@@ -31,8 +32,7 @@ export const SliderComponent = () => {
       );
     };
 
-
-  
+    
     const comsTitles  = dataset_model.map((data, index) => (
       <BoxComponent
         key={index}
@@ -112,10 +112,12 @@ export const SliderComponent = () => {
                             </li>
                           ))}
                         </ul>
+                        {isVisible && <FullPalateColor />}                        
                         <div className="spaceInside" >
                           {comsTitles[index]}
                         </div>
                       </nav>
+
                     </div>
                   ))}
                 </Slider>
@@ -132,12 +134,16 @@ export const SliderComponent = () => {
 }
   
 const BoxComponent = ({ numOfBoxes , imageProps, namesProp, pricesProp , slideIndex ,FrameName ,WingName}) => {
+  
   const boxesInColumn1 = (Math.ceil(numOfBoxes / 2));
   const boxesInColumn2 = (numOfBoxes - boxesInColumn1);
-  const {meterial , setMeterial , legs , setLegs ,chairColor ,
-    setChairColor,cushionColor , setCushionColor} = useCustomization(); 
-
-
+  const { setObjectName , setKeynumber  , setSlideNumber , meterial , setMeterial , legs , setLegs ,chairColor ,
+    setChairColor,cushionColor , setCushionColor , isVisible, setIsVisible} = useCustomization(); 
+  
+  const handleClick = () => {
+    setIsVisible(!isVisible);
+  };
+  
   const boxStyle = {
     width: '10.7vw',
     height: '22.3vh',
@@ -159,20 +165,27 @@ const BoxComponent = ({ numOfBoxes , imageProps, namesProp, pricesProp , slideIn
   const createBox = (key,slideIndex) => (
     
     <div key={key} style={boxStyle} className='BoxComponent'>
-      <div  className={`item ${meterial === "FrameA" ? "item--active" : ""} 
+      <div  className={`item ${meterial === "" ? "item--active" : ""} 
                       ${legs === "" ? "item--active" : ""} `}
       
       onClick={() => {
+        handleClick() 
+        setKeynumber(key)
+        setSlideNumber(slideIndex)
+
         if (slideIndex === 0) {
           setMeterial(FrameName[key]);
+          setObjectName(FrameName[key])
         }
         if (slideIndex === 1) {
           setLegs(WingName[key]);
+          setObjectName(WingName[key])
         }
         if(slideIndex === 2){
           setChairColor(chairColorsArray[key])
           console.log(chairColorsArray[key])
         }
+
       }}
       
       style={{ boxShadow: '0px 4px rgba(0, 0, 0, 0.2)', marginTop: '-1vh', width: '10.7vw', height: '78%', backgroundColor: '#E2E3E3', borderRadius: '1.2vw' }}>

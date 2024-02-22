@@ -17,12 +17,11 @@ export function MainFrame(props) {
     <group {...props} dispose={null}>
       <mesh  visible={false} geometry={nodes.MainDroneAssembly.geometry} material={materials.phongE6} position={[0, 0.07, 0]} rotation={[Math.PI / 2, 0, 0]} scale={0.341} />
       
-      
       <Frame1 visible={meterial === "Frame A"} />
       <Frame2 visible={meterial === "Frame B" } color={chairColor.color}/>
-      <A_Leg1 visible={legs ===  "WingsA"} color={chairColor.color}/>
-      <B_Leg1 visible={legs === "WingsB"}color={chairColor.color}/>
-      <B_Leg2 visible={legs === "WingsC"}color={chairColor.color}/>
+      <A_Leg1 visible={legs ===  "Leg A"} color={chairColor.color}/>
+      <B_Leg1 visible={legs === "Leg B"}color={chairColor.color}/>
+      <B_Leg2 visible={legs === "Leg C"}color={chairColor.color}/>
     </group>
   )
 }

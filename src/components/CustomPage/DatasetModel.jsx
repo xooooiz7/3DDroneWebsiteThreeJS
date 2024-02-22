@@ -15,8 +15,8 @@ const dataset_model = [
     {
       numOfBoxes: 3,
       imageProps: ["WingsA","WingsB"],
-      namesProp: ["WingsA","WingsB","WingsC"],
-      wingName : ["WingsA","WingsB","WingsC"] , 
+      namesProp: ["Leg A","Leg B","Leg C"],
+      wingName : ["Leg A","Leg B","Leg C"] , 
       pricesProp: [3, 4],
       
     },
@@ -36,4 +36,79 @@ const dataset_model = [
     },
 ];
 
-export { dataset_model, cardTitles };
+
+
+const chairColors = [
+  {
+    color: "#683434",
+    name: "brown",
+  },
+  {
+    color: "#1a5e1a",
+    name: "green",
+  },
+  {
+    color: "#659994",
+    name: "blue",
+  },
+  {
+    color: "#896599",
+    name: "mauve",
+  },
+  {
+    color: "#ffa500",
+    name: "orange",
+  },
+  {
+    color: "#59555b",
+    name: "grey",
+  },
+  {
+    color: "#222222",
+    name: "black",
+  },
+  {
+    color: "#ececec",
+    name: "white",
+  },
+];
+
+export const cushionColors = [
+  {
+    color: "#683434",
+    name: "brown",
+  },
+  {
+    color: "#1a5e1a",
+    name: "green",
+  },
+  {
+    color: "#659994",
+    name: "blue",
+  },
+  {
+    color: "#896599",
+    name: "mauve",
+  },
+  {
+    color: "#ffa500",
+    name: "orange",
+  },
+  {
+    color: "#59555b",
+    name: "grey",
+  },
+  {
+    color: "#222222",
+    name: "black",
+  },
+  {
+    color: "#ececec",
+    name: "white",
+  },
+];
+
+
+
+
+export { dataset_model, cardTitles , chairColors };

@@ -1,57 +1,15 @@
 @import '../../sass/variables';
 
-.CustomPageContainer{
-    background-color: rgb(221, 221, 221);
-    height: 100vh;
-    margin-top: -2vh
-}
-.CustomPageContainer h1{
-   padding-top: 50vh;
-   padding-left: 48vw;
-    
-}
+
 
 .configurator{
     position: fixed;
-    right: 24px;
-    width: 320px;
+    width: 19.24vw;
     bottom:25vh ;
     color: white;
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-}
-.configurator__section__title{
-    text-transform: uppercase;
-}
-.configurator__section__values{
-    display: flex;
-    align-items: center;
-    gap: 32px;
-    margin-top: 24px;
-    flex-wrap: wrap;
-}
-.item__label{
-    font-size: 15px;
-}
-.item__dot{
-    width: 32px;
-    height: 32px;
-    border-radius: 100%;
-    border: solid 2px #9999;
-}
-.item:hover{
-    cursor: pointer;
-}
-.item{
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
 }
 
 ///////////////Slider //////////////////
-/* Add this to your SliderStyles.css or your main styles */
 .full-page-card {
     background-color: $gray-slide-backgroud ;
     border: 1px solid $gray-slide-backgroud ;
@@ -230,12 +188,12 @@
     background-color: red;
 }
 .all-slider-container {
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Add smooth transition effect */
-    opacity: 1; /* Initial opacity */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 1;
 
   }
   .slider-content {
-    opacity: 1; /* Initial opacity */
+    opacity: 1; 
   }
   
   .open {
@@ -243,14 +201,10 @@
   }
   
   .closed .slider-content {
-    opacity: 0; /* Set opacity to 0 when closed */
-    transition: opacity 0.3s ease; /* Add smooth transition effect for opacity */
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
 
   }
-//   .closed .box-a-slide{
-//     transform: translateX(100%);
-
-//   }
   .closed{
     transform: translateX(100%);
 
@@ -283,6 +237,74 @@
     width: 100vw;
     position: relative;
     top: 20vh;
-    right: 10vw;
+    left:72vw;
     display: flex;
+}
+.ChooseColorScreen{
+    background-color: rgb(168, 146, 146);
+    z-index:99;
+    position: absolute;
+    height: 70vh;
+    border-radius: 0px 0px 13px 13px;
+    width: 24vw;
+
+}
+
+//Color Palate  style ////////////
+.ImagePropsPalate{
+    background-color: rgb(115, 115, 115);
+    width: 90%;
+    height: 25%;
+    margin: 0 auto;
+    margin-top: 2%;
+    border: 0px solid rgba(0, 0, 0, 0);
+    border-radius: 1vw;
+    
+}
+.ImagePropsPalate h1{
+    padding-top: 4vw;
+}
+.NamePropsPalate , .PricesPropsPalate{
+    // background-color: red;
+    height: 6%;
+}
+.NamePropsPalate p {
+    padding-right: 18vw;
+    padding-top: 1vh;
+}
+.PricesPropsPalate p , .titleColorPalate h4{
+    padding-right: 16.5vw;
+    padding-top: 1vh;
+}
+.ColorPropsPalate{
+    background-color: rgb(88, 51, 51);
+    margin-top: 2vh;
+    height: 30%;
+}
+.SizePropsPalate{
+    background-color: rgb(136, 136, 136);
+    display: flex;
+    justify-content: center;
+
+
+}
+.size-InsidePalate{
+    background-color: rgb(190, 190, 190);
+    width: 7vw;
+    margin: 1vw;
+    border-radius: 0.3vw;
+}
+.BtnPropsPalate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.prev-btn-Palate , .next-btn-Palate{
+    background-color: rgb(171, 159, 159);
+    border-radius: 2vw;
+    padding-top: 0.3vw;
+    width: 5vw;
+    height: 3vh;
+    justify-content: space-between;
+    margin: 2vw;
 }
