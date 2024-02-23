@@ -254,15 +254,17 @@
 .ImagePropsPalate{
     background-color: rgb(115, 115, 115);
     width: 90%;
-    height: 25%;
+    height: 30%;
     margin: 0 auto;
     margin-top: 2%;
     border: 0px solid rgba(0, 0, 0, 0);
     border-radius: 1vw;
     
 }
-.ImagePropsPalate h1{
-    padding-top: 4vw;
+
+.ImagePropsPalate img{
+    width: 80%;
+    margin-left: 2vw;
 }
 .NamePropsPalate , .PricesPropsPalate{
     // background-color: red;
@@ -308,3 +310,23 @@
     justify-content: space-between;
     margin: 2vw;
 }
+
+
+//// color Palate Style 
+.Inside-colorPalate {
+    display: flex;
+    gap: 10px; /* Adjust the gap between color boxes as needed */
+    z-index: 1;
+  }
+  
+  .colorBox {
+    width: 50px; /* Adjust the width of each color box */
+    height: 50px; /* Adjust the height of each color box */
+    cursor: pointer;
+    z-index: 1;
+    background-color: rgb(186, 184, 184);
+
+  }
+  
+  /* Add any additional styling you want for the color boxes */
+  

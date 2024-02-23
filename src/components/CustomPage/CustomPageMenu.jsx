@@ -11,8 +11,9 @@ import { FullPalateColor } from './CustomPagePalate';
 export const SliderComponent = () => {
     const sliderRef = useRef(null); 
     const [isSliderOpen, setIsSliderOpen] = useState(true);
-    const {isVisible} = useCustomization(); 
+    const {setIsVisible,isVisible} = useCustomization(); 
 
+   
     const toggleSlider = () => {
       setIsSliderOpen(!isSliderOpen);
     };
@@ -57,13 +58,17 @@ export const SliderComponent = () => {
 
     const goToSlide = (index) => {
       sliderRef.current.slickGoTo(index);
+      setIsVisible(false)
     };
     const slidePrev = () => {
       sliderRef.current.slickPrev();
+      setIsVisible(false)
     };
   
     const slideNext = () => {
       sliderRef.current.slickNext();
+      setIsVisible(false)
+
     };
     
     return (
@@ -71,7 +76,7 @@ export const SliderComponent = () => {
         <div className="slide-top">
           <div className="box-a-slide">
           <div className={`all-slider-container ${isSliderOpen ? 'open' : 'closed'}`}>
-
+            
             <button onClick={toggleSlider} className="toggle-button">
               {getToggleIcon()}
             </button>
@@ -90,12 +95,12 @@ export const SliderComponent = () => {
                       <div className="title-card-slider">
                         <h1>{title}</h1>
                         <div className='Arrow-all'>
-                        <button onClick={slidePrev} className="arrow-button" id='arrow-btn-left'>
+                        <button onClick={() => {slidePrev();}} className="arrow-button" id='arrow-btn-left'>
                               <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
                                 <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
                               </svg>
                         </button>
-                        <button onClick={slideNext} className="arrow-button" id='arrow-btn-right'>
+                        <button onClick={() => {slideNext();}} className="arrow-button" id='arrow-btn-right'>
                               <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
                                 <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
                               </svg>
@@ -137,6 +142,7 @@ const BoxComponent = ({ numOfBoxes , imageProps, namesProp, pricesProp , slideIn
   
   const boxesInColumn1 = (Math.ceil(numOfBoxes / 2));
   const boxesInColumn2 = (numOfBoxes - boxesInColumn1);
+
   const { setObjectName , setKeynumber  , setSlideNumber , meterial , setMeterial , legs , setLegs ,chairColor ,
     setChairColor,cushionColor , setCushionColor , isVisible, setIsVisible} = useCustomization(); 
   

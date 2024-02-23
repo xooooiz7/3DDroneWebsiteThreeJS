@@ -15,8 +15,8 @@ export const CustomizationProvider = (props) => {
     //ส่งไปหา Chair (สำหรับตัว ขา)
     const [legs , setLegs] = useState(''); //useState 1 หมายถึง ค่า default
 
-    const [chairColor , setChairColor] = useState(chairColors[0]);  // เข้าถึง arr [0]
-
+    const [chairColor , setChairColor] = useState('');  // เข้าถึง arr [0]
+    const [legColor , setLegColor] = useState('')
     // กำหนดค่าสำหรับส่ง จากตัว useState ข้างบน
     return <CustomizationContext.Provider value={{
         meterial ,
@@ -32,7 +32,9 @@ export const CustomizationProvider = (props) => {
         slideNumber , 
         setSlideNumber , 
         objectName , 
-        setObjectName
+        setObjectName,
+        legColor ,
+        setLegColor
     }}>
         {props.children}
     </CustomizationContext.Provider>
