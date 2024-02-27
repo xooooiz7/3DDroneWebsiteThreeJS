@@ -3,6 +3,7 @@ import { useCustomization } from '../../contexts/Customization';
 import { Material } from 'three';
 import { dataset_model } from './DatasetModel';
 import { chairColors } from './DatasetModel';
+// import { slideNext } from './CustomPageMenu';
 
 export const FullPalateColor = () => {
     const {slideNumber ,keyNumber,meterial, legs ,objectName , setChairColor
@@ -29,21 +30,11 @@ export const FullPalateColor = () => {
         }
       };
 
-    const ShowName = () => {
-        console.log("LEGS => ",legs)
-        console.log("Mererial =>" , meterial)
-        console.log("dataset_model[slideNumber]" , dataset_model[slideNumber])
-        for (let i = 0; i < chairColors.length; i++) {
-            console.log(`Color: ${chairColors[i].color}, Name: ${chairColors[i].name}`);
-          }
-        
-    }
+   
 
-    const findMaterialIndex = () => {
-        const currentIndex = dataset_model.findIndex((item) => item.namesProp.includes(meterial));
-        console.log("Material Index:", currentIndex);
-    };
     return (
+        <div className="Bg-colorScreen">
+
         <div className="ChooseColorScreen">
             <div className="ImagePropsPalate">
                 <img src={dataset_imageProps} alt="" />
@@ -52,7 +43,7 @@ export const FullPalateColor = () => {
             <div className="PricesPropsPalate"><p>{dataset_pricesProp}</p></div>
             <hr />
             <div className="ColorPropsPalate">
-                <div className="titleColorPalate"><h4>ColorPalates</h4></div>
+                <div className="titleColorPalate"><h4> Color</h4></div>
                 <div className="Inside-colorPalate">
                 {dataset_colorsProp.map((color, index) => (
                         <div
@@ -71,12 +62,14 @@ export const FullPalateColor = () => {
             </div>
             <div className="BtnPropsPalate">
                 <div className="prev-btn-Palate">
-                    <button onClick={() => { handleClick(); ShowName(); findMaterialIndex()}}>
-                        PREV
+                    <button onClick={() => { handleClick() ; }}>
+                        Back
                     </button></div>
-                <div className="next-btn-Palate"><button >NEXT</button></div>
+                <div className="next-btn-Palate"><button>
+                        Next
+                    </button></div>
             </div>
-        </div>
+        </div></div>
     )
   }
   

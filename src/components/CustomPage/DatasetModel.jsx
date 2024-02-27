@@ -9,20 +9,19 @@ const dataset_model = [
       ],
       namesProp: ["Frame A","Frame B","Frame C", "d"],
       FrameName : ["Frame A","Frame B","Frame C", "d"] , 
-      pricesProp: [300,350, 100, 4],
-      colorsProp: ["#683434" ,"#1a5e1a" ,"#659994" , "#896599" , "#59555b" ]
+      pricesProp: [300,350, 100, 400],
+      colorsProp: ["#E9351D" ,"#4127DC" ,"#000000" , "#B85C1A" , "#F1FF52"]
     },
     {
       numOfBoxes: 3,
       imageProps: [
         "https://images.unsplash.com/photo-1699959634881-16f34059a78f?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
         "https://images.unsplash.com/photo-1690885744537-1ff88d3ff9ad?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
-        "https://images.unsplash.com/photo-1708169967312-889c71da622b?q=80&w=1744&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],      namesProp: ["Leg A","Leg B","Leg C"],
-      wingName : ["Leg A","Leg B","Leg C"] , 
-      pricesProp: [3, 4],
+        "https://images.unsplash.com/photo-1708169967312-889c71da622b?q=80&w=1744&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],     
+      namesProp: ["Leg A","Leg K","Leg C"],
+      wingName : ["Leg A","Legssss","Leg C"] , 
+      pricesProp: [350, 450 , 400],
       colorsProp: ["#683434" ,"#1a5e1a" ,"#659994" , "#896599" , "#59555b" ]
-
-      
     },
     {
       numOfBoxes: 3,

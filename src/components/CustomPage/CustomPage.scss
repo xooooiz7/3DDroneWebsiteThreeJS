@@ -240,25 +240,40 @@
     left:72vw;
     display: flex;
 }
+.Bg-colorScreen{
+    background-color: #61636B;
+    z-index:98;
+    height: 68vh;
+    width: 22vw;
+    position: absolute;
+    width: 25vw;
+    border-radius: 13px 13px 13px 13px;
+
+}
 .ChooseColorScreen{
-    background-color: rgb(168, 146, 146);
+    background-color: #FFFFFF;
     z-index:99;
     position: absolute;
-    height: 70vh;
-    border-radius: 0px 0px 13px 13px;
-    width: 24vw;
-
+    height: 55vh;
+    border-radius: 13px 13px 13px 13px;
+    width: 22vw;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12vh;
+    margin-left: 1vw;
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.192);
 }
 
 //Color Palate  style ////////////
 .ImagePropsPalate{
-    background-color: rgb(115, 115, 115);
+    background-color: #E2E3E3;
     width: 90%;
-    height: 30%;
+    height: 40%;
     margin: 0 auto;
-    margin-top: 2%;
+    margin-top: 4%;
     border: 0px solid rgba(0, 0, 0, 0);
     border-radius: 1vw;
+    box-shadow: 2px 2px rgba(128, 128, 128, 0.155);
     
 }
 
@@ -277,14 +292,13 @@
 .PricesPropsPalate p , .titleColorPalate h4{
     padding-right: 16.5vw;
     padding-top: 1vh;
+    color: #333;
 }
 .ColorPropsPalate{
-    background-color: rgb(88, 51, 51);
-    margin-top: 2vh;
-    height: 30%;
+    margin-top: 0.3vh;
+    height: 20%;
 }
 .SizePropsPalate{
-    background-color: rgb(136, 136, 136);
     display: flex;
     justify-content: center;
 
@@ -298,35 +312,66 @@
 }
 .BtnPropsPalate{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 .prev-btn-Palate , .next-btn-Palate{
     background-color: rgb(171, 159, 159);
     border-radius: 2vw;
-    padding-top: 0.3vw;
     width: 5vw;
     height: 3vh;
     justify-content: space-between;
     margin: 2vw;
+    font-size:.9vw;
+    font-weight: 200;
+    margin-top: 1.5vh;
+    box-shadow:1px 3px rgba(42, 42, 42, 0.24);
+
+}
+.prev-btn-Palate{
+    background-color: #000619;
+}
+.next-btn-Palate{
+    background-color: #C35434;
+}
+.prev-btn-Palate:hover{
+    box-shadow:1px 4px rgba(42, 42, 42, 0.24);
+    background-color: #01081b;
+    cursor: pointer;
+
+}
+.next-btn-Palate:hover{
+    box-shadow:1px 4px rgba(42, 42, 42, 0.24);
+    background-color: #b14d32;
+    cursor: pointer;
+
 }
 
 
 //// color Palate Style 
 .Inside-colorPalate {
     display: flex;
-    gap: 10px; /* Adjust the gap between color boxes as needed */
+    gap: 20px; 
     z-index: 1;
+    justify-content: center;
+    align-items: center;
   }
-  
+
   .colorBox {
-    width: 50px; /* Adjust the width of each color box */
-    height: 50px; /* Adjust the height of each color box */
+    width: 25px; 
+    height: 25px; 
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 50%;
     cursor: pointer;
     z-index: 1;
     background-color: rgb(186, 184, 184);
 
   }
-  
-  /* Add any additional styling you want for the color boxes */
+  .colorBox:hover{
+    width: 28px; 
+    height: 28px; 
+    box-shadow: 1px 3px rgba(0, 0, 0, 0.128);
+
+  }
+
   

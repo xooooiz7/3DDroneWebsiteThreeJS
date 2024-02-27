@@ -136,8 +136,11 @@ export const SliderComponent = () => {
 
     </>
     )
+    
 }
+
   
+
 const BoxComponent = ({ numOfBoxes , imageProps, namesProp, pricesProp , slideIndex ,FrameName ,WingName}) => {
   
   const boxesInColumn1 = (Math.ceil(numOfBoxes / 2));
