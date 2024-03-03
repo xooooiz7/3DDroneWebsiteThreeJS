@@ -10,8 +10,8 @@ export const FullPalateColor = () => {
             ,setLegColor, chairColor ,cushionColor , isVisible, setIsVisible  } = useCustomization() 
   
     const dataset_drone = dataset_model[slideNumber]
+    
     // imageProps pricesProp
-
     const dataset_imageProps = dataset_drone.imageProps[keyNumber]
     const dataset_pricesProp = dataset_drone.pricesProp[keyNumber]
     const dataset_colorsProp = dataset_drone.colorsProp

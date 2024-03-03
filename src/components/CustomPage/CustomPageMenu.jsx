@@ -13,7 +13,6 @@ export const SliderComponent = () => {
     const [isSliderOpen, setIsSliderOpen] = useState(true);
     const {setIsVisible,isVisible} = useCustomization(); 
 
-   
     const toggleSlider = () => {
       setIsSliderOpen(!isSliderOpen);
     };
@@ -233,3 +232,16 @@ const BoxComponent = ({ numOfBoxes , imageProps, namesProp, pricesProp , slideIn
     </div>
   );
 };
+
+
+export const BoxProgressInside = ({ name, Status }) => {
+  
+  return (
+    <>
+      <div className="progress-box">
+        <div className="name-progress">Name:{name}___ </div>
+        <div className="Icon-Status-Progress"> Status : {Status}</div>
+      </div>
+  </>
+  )
+}
