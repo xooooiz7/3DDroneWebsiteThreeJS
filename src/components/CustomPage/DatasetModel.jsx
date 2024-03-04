@@ -1,5 +1,5 @@
 
-const cardTitles = ["Frame", "Legs", "FC","Wings"];
+const cardTitles = ["Frame", "Legs", "FC","Wings",'Motors','Battery','Camera','Cam Control','GPS','Sensor'];
 const dataset_model = [
     {
       numOfBoxes: 2,

@@ -41,7 +41,7 @@
     width: 2vw;
     margin-left: 0vw;
     border-radius: 6px;
-    box-shadow: 0px 2.5px rgba(0, 0, 0, 0.27);
+    box-shadow: 0.6px 3px 0px 0.3px rgba(0, 0, 0, 0.243);
     width: 6vw;
     align-items: center;
     justify-content: center;
@@ -61,6 +61,7 @@
 }
 .full-page-card{
     height: 80vh;
+    
 
 }
 .navbar{
@@ -73,6 +74,7 @@
 }
 .full-page-card h1{
     font-size: 1.5vw;
+    
     font-weight:100;
 }
 #name-title-click {
@@ -87,10 +89,11 @@
     width: 24vw;
     display: flex;
     align-items: center;
+    
     justify-content: center;
 }
 .spaceInside{
-    height: 68vh;
+    height: 64vh;
     border: 1px solid rgba(255, 255, 255, 0);
     border-radius: 0px 0px 13px 13px;
     background-color: #61636B;
@@ -247,19 +250,19 @@
     width: 22vw;
     position: absolute;
     width: 25vw;
-    border-radius: 13px 13px 13px 13px;
+    border-radius: 0px 0px 13px 13px;
 
 }
 .ChooseColorScreen{
     background-color: #FFFFFF;
     z-index:99;
     position: absolute;
-    height: 55vh;
-    border-radius: 13px 13px 13px 13px;
+    height: 62vh;
+    border-radius: 0px 0px 13px 13px;
     width: 22vw;
     align-items: center;
     justify-content: center;
-    margin-top: 12vh;
+    margin-top: 2vh;
     margin-left: 1vw;
     box-shadow: 4px 4px rgba(0, 0, 0, 0.192);
 }
@@ -379,15 +382,76 @@
 //component status
 .progress-box , .Topic-Progress{
     display: flex;
-    font-size: 0.6vw;
+    font-size: 0.87vw;
+    color: #000619;
+    font-weight: 400;
+
 }
+.Topic-Progress{
+    color: #FFFFFF;
+
+}
+
 
 .BoxProgress{
     background-color: #61636B;
     position: absolute;
-    bottom: 3vw;
+    bottom: -2.4vw;
     left: 3vw;
     width: 10vw;
-    height: 50vh;
+    height: 65vh;
     border-radius: 0.5vw;
+    box-shadow: 4px 4px rgba(41, 41, 41, 0.44);
+    // overflow-y: scroll;
+}
+.Topic-Progress{
+    background-color: #C35434;
+    height: 4vh;
+    border-radius: 12px 12px 0px 0px;
+}
+.progress-box{
+    background-color: #E2E3E3;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.5vw;
+    width:9vw;
+    height: 3vh;
+    margin-top: 1vw;
+    border-radius: 13px 13px 13px 13px;
+    box-shadow: 4px 4px rgba(20, 20, 20, 0.429);
+}
+.Topic-icon{
+    padding-top: 1vh;
+    width: 1vw;
+}
+.Topic-L{
+    width: 5vw;
+    margin-left: 2.4vw;
+}
+.Topic-L p {
+    justify-content: center;
+    align-items: center;
+    padding-left: 0.7vw;
+    padding-top: .5vh;
+
+}
+.topic-name-AddOn  , .topic-name-req   , .topic-name-rec {
+    font-size: 0.75vw;
+    font-weight: 100;
+    display: flex;
+    margin-top: 0.7vh;
+    color: #B9BABE;
+}
+
+.topic-name-rec hr ,.topic-name-AddOn hr,.topic-name-req hr {
+    width: 2vw;
+    margin: 0.5vw;
+    align-items: center;
+    justify-content: space-between;
+}
+.topic-name-AddOn hr{
+    margin-left: 1.1vw;
+}
+.topic-name-req hr{
+    margin-left: 1vw;
 }

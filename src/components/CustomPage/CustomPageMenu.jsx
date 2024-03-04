@@ -239,8 +239,8 @@ export const BoxProgressInside = ({ name, Status }) => {
   return (
     <>
       <div className="progress-box">
-        <div className="name-progress">Name:{name}___ </div>
-        <div className="Icon-Status-Progress"> Status : {Status}</div>
+        <div className="name-progress">{name} </div>
+        <div className="Icon-Status-Progress">: {Status}</div>
       </div>
   </>
   )
