@@ -245,3 +245,28 @@ export const BoxProgressInside = ({ name, Status }) => {
   </>
   )
 }
+
+
+const ProgressBar = ({ value, maxValue }) => {
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    if (value >= 0 && value <= maxValue) {
+      setProgress((value / maxValue) * 100);
+    }
+  }, [value, maxValue]);
+
+  return (
+    <div>
+      <div className='percentage-status'><p>25%</p></div>
+    <div className="progress-bar-container">
+      {/* <div className="progress-bar" style={{ width: `${progress}%` }}></div> */}
+      
+      <div className="progress-bar" style={{ width: `${25}%` }}>
+      </div>
+    </div>
+    </div>
+  );
+};
+
+export default ProgressBar;

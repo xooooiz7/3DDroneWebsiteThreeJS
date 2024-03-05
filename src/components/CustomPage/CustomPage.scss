@@ -251,20 +251,23 @@
     position: absolute;
     width: 25vw;
     border-radius: 0px 0px 13px 13px;
-
+    
 }
+
 .ChooseColorScreen{
     background-color: #FFFFFF;
     z-index:99;
     position: absolute;
     height: 62vh;
-    border-radius: 0px 0px 13px 13px;
+    border-radius: 13px 13px 13px 13px;
     width: 22vw;
     align-items: center;
     justify-content: center;
     margin-top: 2vh;
     margin-left: 1vw;
     box-shadow: 4px 4px rgba(0, 0, 0, 0.192);
+    overflow-y: scroll;
+
 }
 
 //Color Palate  style ////////////
@@ -284,16 +287,8 @@
     width: 80%;
     margin-left: 2vw;
 }
-.NamePropsPalate , .PricesPropsPalate{
-    // background-color: red;
-    height: 6%;
-}
-.NamePropsPalate p {
-    padding-right: 18vw;
-    padding-top: 1vh;
-}
-.PricesPropsPalate p , .titleColorPalate h4{
-    padding-right: 16.5vw;
+
+.titleColorPalate h4{
     padding-top: 1vh;
     color: #333;
 }
@@ -301,18 +296,7 @@
     margin-top: 0.3vh;
     height: 20%;
 }
-.SizePropsPalate{
-    display: flex;
-    justify-content: center;
 
-
-}
-.size-InsidePalate{
-    background-color: rgb(190, 190, 190);
-    width: 7vw;
-    margin: 1vw;
-    border-radius: 0.3vw;
-}
 .BtnPropsPalate{
     display: flex;
     justify-content: space-between;
@@ -454,4 +438,81 @@
 }
 .topic-name-req hr{
     margin-left: 1vw;
+}
+
+.Undo-Container{
+    display: flex;
+    position: absolute;
+    bottom: 62vh;
+    left: 6.2vw;
+    
+}
+.fwd-btn{
+    margin-left: 0.55vw;
+}
+.und-btn svg , .fwd-btn svg{
+    width: 1.5vw;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 50%;
+    color:rgb(146, 146, 146);
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+.und-btn svg:hover , .fwd-btn svg:hover{
+    background-color:#61636B;
+    cursor: pointer;
+    color:rgb(227, 227, 227);
+
+}
+.clear-all-container{
+    position: absolute;
+    background-color: #CE8683;
+    margin-top: 6vh;
+    margin-left: 5vw;
+    width: 6vw;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 1vw;
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.404);
+}
+.clear-all-container:hover{
+    background-color: #b37472;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+.clear-all-btn{
+    align-items: center;
+    display: flex;
+    font-weight: 100;
+    font-size: 1vw;
+    padding-left: 0.4vw;
+}
+.trash-icon svg{
+    width: 1.1vw;
+    padding-top: 0.1vh;
+    margin-left: 0.3vw;
+}
+.progress-bar-container {
+    width: 40vw;
+    position: absolute;
+    left:55vh;
+    background-color: #E2E3E3;
+    height: 1.2vh;
+    border-radius: 5px;
+    margin-top: 15vh;
+    overflow: hidden;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background-color: #66AD45;
+    transition: width 0.3s ease-in-out;
+  }
+  
+.percentage-status p {
+    position: absolute;
+    left: 64vw;
+    font-size: 0.9vw;
+    font-weight: 100;
+    margin-top: 11vh;
 }

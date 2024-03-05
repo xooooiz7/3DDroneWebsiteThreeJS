@@ -34,13 +34,12 @@ export const FullPalateColor = () => {
 
     return (
         <div className="Bg-colorScreen">
-
+        {/* ชื่อ => objectName
+        ราคา => dataset_pricesProp */}
         <div className="ChooseColorScreen">
             <div className="ImagePropsPalate">
                 <img src={dataset_imageProps} alt="" />
             </div>
-            <div className="NamePropsPalate"><p>{objectName}</p></div>
-            <div className="PricesPropsPalate"><p>{dataset_pricesProp}</p></div>
             <hr />
             <div className="ColorPropsPalate">
                 <div className="titleColorPalate"><h4> Color</h4></div>
@@ -55,11 +54,7 @@ export const FullPalateColor = () => {
                     ))}
                 </div>
             </div>
-            <div className="SizePropsPalate">
-                    <div className="size-InsidePalate">20 CM</div>
-                    <div className="size-InsidePalate">30 CM</div>
-                    <div className="size-InsidePalate">40 CM</div>
-            </div>
+            
             <div className="BtnPropsPalate">
                 <div className="prev-btn-Palate">
                     <button onClick={() => { handleClick() ; }}>
