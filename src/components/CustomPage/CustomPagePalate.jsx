@@ -40,9 +40,29 @@ export const FullPalateColor = () => {
             <div className="ImagePropsPalate">
                 <img src={dataset_imageProps} alt="" />
             </div>
-            <hr />
+            <div className="Name-Palate">
+                <div className="name-insd"><p>wings 101</p></div>
+                <div className="disc-insd"><p>xxxxxxxxxxxxxxxx</p></div>
+                <div className='price-insd'><p>500 Baht</p></div>
+            </div>
+            
+            
             <div className="ColorPropsPalate">
-                <div className="titleColorPalate"><h4> Color</h4></div>
+                <div className="titlePalate-size">
+                    <hr />
+                    <h4> Size</h4>
+                    <hr />
+                </div>
+                <div className="size-btn">
+                    <div className="container-size"><p>25 cm</p></div>
+                    <div className="container-size"><p>50 cm</p></div>
+                    <div className="container-size"><p>70 cm</p></div>
+                </div>
+                <div className="titlePalate">
+                    <hr />
+                    <h4> Color palette</h4>
+                    <hr />
+                </div>
                 <div className="Inside-colorPalate">
                 {dataset_colorsProp.map((color, index) => (
                         <div
@@ -64,7 +84,8 @@ export const FullPalateColor = () => {
                         Next
                     </button></div>
             </div>
-        </div></div>
+        </div>
+        </div>
     )
   }
   

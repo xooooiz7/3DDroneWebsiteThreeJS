@@ -4,13 +4,11 @@ const dataset_model = [
     {
       numOfBoxes: 2,
       imageProps: [
-      "https://images.unsplash.com/photo-1602526214925-4fedda6a53df?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "https://images.unsplash.com/photo-1553165558-424ffa9c4303?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       ],
       namesProp: ["Frame A","Frame B","Frame C", "d"],
       FrameName : ["Frame A","Frame B","Frame C", "d"] , 
       pricesProp: [300,350, 100, 400],
-      colorsProp: ["#E9351D" ,"#4127DC" ,"#000000" , "#B85C1A" , "#F1FF52"]
+      colorsProp: ["#E9351D" ,"#4127DC" ,"#000000" , "#B85C1A" , "#F1FF52" , "#34C38F" ,"#F5F5F5" ,"#858585" , "#E252C3" , "#4CA9DE"]
     },
     {
       numOfBoxes: 3,
