@@ -235,12 +235,18 @@ const BoxComponent = ({ numOfBoxes , imageProps, namesProp, pricesProp , slideIn
 
 
 export const BoxProgressInside = ({ name, Status }) => {
-  
+  const status_color = (Status === "Done") ? '#66AD45' : '#858585';
+  const line_color = (Status === "Done") ? '#66AD45' : '#E2E3E3';
+
   return (
     <>
-      <div className="progress-box">
+    <div className="progress-box" style={{ border: `3px solid ${line_color}` }}>
         <div className="name-progress">{name} </div>
-        <div className="Icon-Status-Progress">: {Status}</div>
+        <div className="Icon-Status-Progress">
+          <svg xmlns="http://www.w3.org/2000/svg" fill={status_color} class="bi bi-circle-fill" viewBox="0 0 16 16">
+            <circle cx="8" cy="8" r="8"/>
+          </svg>
+        </div>
       </div>
   </>
   )

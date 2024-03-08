@@ -359,19 +359,21 @@
     font-weight: 200;
     margin-top: 1.5vh;
     box-shadow:1px 3px rgba(42, 42, 42, 0.24);
+    transition: background-color 0.3s, box-shadow 0.3s, opacity 0.3s;
+
 
 }
 .prev-btn-Palate{
     background-color: #000619;
 }
 .next-btn-Palate{
-    background-color: #C35434;
+    background-color: #b14a2e;
 }
 .prev-btn-Palate:hover{
     box-shadow:1px 4px rgba(42, 42, 42, 0.24);
     background-color: #01081b;
     cursor: pointer;
-
+    opacity: 0.8;
 }
 .next-btn-Palate:hover{
     box-shadow:1px 4px rgba(42, 42, 42, 0.24);
@@ -422,8 +424,8 @@
   }
 
   .colorBox {
-    width: 11%; 
-    height: 1.5rem; 
+    width: 1.3vw; 
+    height: 1.3vw; 
     border: 1px solid rgba(0, 0, 0, 0);
     border-radius: 50%;
     cursor: pointer;
@@ -433,8 +435,8 @@
 
   }
   .colorBox:hover{
-    width: 13%; 
-    height: 1.7rem; 
+    width: 1.6vw; 
+    height: 1.6vw; 
     box-shadow: 1px 3px rgba(0, 0, 0, 0.128);
 
   }
@@ -448,6 +450,28 @@
     font-weight: 400;
 
 }
+.progress-box{
+    justify-content: space-between;
+    
+
+}
+.name-progress{
+    width: 8vw;
+    text-align: center;
+    position: absolute;
+}
+.Icon-Status-Progress{
+    width: 3vw;
+    height: 2.5vh;
+}
+.Icon-Status-Progress svg{
+    margin-top: 0.2vw;
+    margin-left: 4.5vw;
+    width: 1.5vw;
+    height: 1.5vh;
+}
+
+
 .Topic-Progress{
     color: #FFFFFF;
 

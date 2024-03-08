@@ -40,11 +40,11 @@ export const MenuTopicComponent = () => {
                     <hr />
                 </div>
                 <div className="component-inside-req">
-                    <BoxProgressInside name={"Frame"} Status={"o"}/>
-                    <BoxProgressInside name={"Legs"} Status={"o"}/>
+                    <BoxProgressInside name={"Frame"} Status={"Done"}/>
+                    <BoxProgressInside name={"Legs"} Status={"Done"}/>
                     <BoxProgressInside name={"FC"} Status={"o"}/>
                     <BoxProgressInside name={"Wings"} Status={"o"}/>
-                    <BoxProgressInside name={"Motors"} Status={"o"}/>
+                    <BoxProgressInside name={"Motors"} Status={"Done"}/>
                     <BoxProgressInside name={"Battery"} Status={"o"}/>
                 </div>
             </div>
@@ -56,7 +56,7 @@ export const MenuTopicComponent = () => {
                 </div>
                 <div className="component-inside-rec">
                     <BoxProgressInside name={"Camera"} Status={"o"}/>
-                    <BoxProgressInside name={"Cam Controller"} Status={"o"}/>
+                    <BoxProgressInside name={"Cam Controller"} Status={"Done"}/>
                 </div>
 
             </div>

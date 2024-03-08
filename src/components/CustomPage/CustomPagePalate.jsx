@@ -76,8 +76,8 @@ export const FullPalateColor = () => {
             </div>
             
             <div className="BtnPropsPalate">
-                <div className="prev-btn-Palate">
-                    <button onClick={() => { handleClick() ; }}>
+                <div className="prev-btn-Palate" onClick={() => { handleClick() ; }}>
+                    <button>
                         Back
                     </button></div>
                 <div className="next-btn-Palate"><button>
