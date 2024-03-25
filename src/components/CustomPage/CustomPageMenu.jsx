@@ -8,6 +8,7 @@ import {useCustomization } from '../../contexts/Customization';
 import { chairColors } from './DatasetModel';
 import { FullPalateColor } from './CustomPagePalate';
 
+
 export const SliderComponent = () => {
     const sliderRef = useRef(null); 
     const [isSliderOpen, setIsSliderOpen] = useState(true);
@@ -116,7 +117,7 @@ export const SliderComponent = () => {
                             </li>
                           ))}
                         </ul>
-                        {isVisible && <FullPalateColor />}                        
+                        {isVisible && <FullPalateColor slideNext={slideNext} />}                        
                         <div className="spaceInside" >
                           {comsTitles[index]}
                         </div>

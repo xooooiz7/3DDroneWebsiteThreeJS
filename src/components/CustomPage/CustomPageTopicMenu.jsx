@@ -4,9 +4,26 @@ import './CustomPage.scss';
 import React, { useEffect } from 'react';
 import { BoxProgressInside } from './CustomPageMenu';
 import './CustomPage.scss';
+import { cardTitles } from './DatasetModel';
+import { useCustomization } from '../../contexts/Customization';
+import { useState } from 'react';
 
 export const MenuTopicComponent = () => {
-  
+    const {slideNumber ,keyNumber } = useCustomization() ;
+    const [completedSlides, setCompletedSlides] = useState([]); // State to hold completed slide numbers
+
+    const renderStatus = (index) => {
+        if (completedSlides.includes(index)) {
+            return "Done"; 
+        } else if (index === slideNumber) {
+            setCompletedSlides(prevState => [...prevState, slideNumber]);
+            return "Done"; 
+        } else {
+            return "o"; 
+        }
+    };
+    
+    console.log("renderStatus = " , renderStatus)
     return (
       <>
         <div className='Undo-Container'>
@@ -40,12 +57,12 @@ export const MenuTopicComponent = () => {
                     <hr />
                 </div>
                 <div className="component-inside-req">
-                    <BoxProgressInside name={"Frame"} Status={"Done"}/>
-                    <BoxProgressInside name={"Legs"} Status={"Done"}/>
-                    <BoxProgressInside name={"FC"} Status={"o"}/>
-                    <BoxProgressInside name={"Wings"} Status={"o"}/>
-                    <BoxProgressInside name={"Motors"} Status={"Done"}/>
-                    <BoxProgressInside name={"Battery"} Status={"o"}/>
+                    <BoxProgressInside name={cardTitles[0]} Status={renderStatus(0)}/>
+                    <BoxProgressInside name={cardTitles[1]} Status={renderStatus(1)}/>
+                    <BoxProgressInside name={cardTitles[2]} Status={renderStatus(2)}/>
+                    <BoxProgressInside name={cardTitles[3]} Status={renderStatus(3)}/>
+                    <BoxProgressInside name={cardTitles[4]} Status={renderStatus(4)}/>
+                    <BoxProgressInside name={cardTitles[5]} Status={renderStatus(5)}/>
                 </div>
             </div>
             <div className="Recommended-Progress-component">
@@ -55,10 +72,9 @@ export const MenuTopicComponent = () => {
                     <hr />
                 </div>
                 <div className="component-inside-rec">
-                    <BoxProgressInside name={"Camera"} Status={"o"}/>
-                    <BoxProgressInside name={"Cam Controller"} Status={"Done"}/>
+                    <BoxProgressInside name={cardTitles[6]} Status={renderStatus(6)}/>
+                    <BoxProgressInside name={cardTitles[7]} Status={renderStatus(7)}/>
                 </div>
-
             </div>
             <div className="AddOn-Progress-component">
                 <div  className="topic-name-AddOn">
@@ -67,8 +83,8 @@ export const MenuTopicComponent = () => {
                     <hr />
                 </div>
                 <div className="component-inside-AddOn">
-                    <BoxProgressInside name={"GPS"} Status={"o"}/>
-                    <BoxProgressInside name={"SENSOR"} Status={"o"}/>
+                    <BoxProgressInside name={cardTitles[8]} Status={renderStatus(8)}/>
+                    <BoxProgressInside name={cardTitles[9]} Status={renderStatus(9)}/>
                 </div>
 
             </div>

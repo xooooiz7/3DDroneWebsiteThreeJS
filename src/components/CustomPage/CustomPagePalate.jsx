@@ -2,48 +2,52 @@ import './CustomPage.scss';
 import { useCustomization } from '../../contexts/Customization';
 import { Material } from 'three';
 import { dataset_model } from './DatasetModel';
+import { cardTitles } from './DatasetModel';
 import { chairColors } from './DatasetModel';
 // import { slideNext } from './CustomPageMenu';
 
-export const FullPalateColor = () => {
+export const FullPalateColor = ({slideNext }) => {
     const {slideNumber ,keyNumber,meterial, legs ,objectName , setChairColor
             ,setLegColor, chairColor ,cushionColor , isVisible, setIsVisible  } = useCustomization() 
   
     const dataset_drone = dataset_model[slideNumber]
-    
+    const dataset_title = cardTitles[slideNumber]
+
+    const handleNextButtonClick = () => {
+        slideNext();
+    };
     // imageProps pricesProp
     const dataset_imageProps = dataset_drone.imageProps[keyNumber]
     const dataset_pricesProp = dataset_drone.pricesProp[keyNumber]
     const dataset_colorsProp = dataset_drone.colorsProp
+    const dataset_namesProp = dataset_drone.namesProp[keyNumber]
 
     const handleClick = () => {
         setIsVisible(!isVisible);
     };
 
     const handleColorClick = (color) => {
-        console.log(`Clicked color: ${color}`);
         if (slideNumber === 0 && keyNumber === 0) {
-          setChairColor(color);
+            console.log("dataset_cardTitles" , dataset_title)
+            setChairColor(color);
         }
         if (slideNumber === 1 && keyNumber === 0){
+            console.log("dataset_cardTitles" , dataset_title)
             setLegColor(color);
         }
       };
 
-   
 
     return (
         <div className="Bg-colorScreen">
-        {/* ชื่อ => objectName
-        ราคา => dataset_pricesProp */}
         <div className="ChooseColorScreen">
             <div className="ImagePropsPalate">
                 <img src={dataset_imageProps} alt="" />
             </div>
             <div className="Name-Palate">
-                <div className="name-insd"><p>wings 101</p></div>
+                <div className="name-insd"><p>{dataset_namesProp}</p></div>
                 <div className="disc-insd"><p>xxxxxxxxxxxxxxxx</p></div>
-                <div className='price-insd'><p>500 Baht</p></div>
+                <div className='price-insd'><p>{dataset_pricesProp} Baht</p></div>
             </div>
             
             
@@ -80,7 +84,7 @@ export const FullPalateColor = () => {
                     <button>
                         Back
                     </button></div>
-                <div className="next-btn-Palate"><button>
+                <div className="next-btn-Palate" onClick={handleNextButtonClick}><button>
                         Next
                     </button></div>
             </div>
