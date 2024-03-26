@@ -9,8 +9,10 @@ import { useCustomization } from '../../contexts/Customization';
 import { useState } from 'react';
 
 export const MenuTopicComponent = () => {
-    const {slideNumber ,keyNumber } = useCustomization() ;
-    const [completedSlides, setCompletedSlides] = useState([]); // State to hold completed slide numbers
+
+    const {slideNumber ,keyNumber ,doneCount ,setDoneCount } = useCustomization() ;
+    const [completedSlides, setCompletedSlides] = useState([]); 
+    
 
     const renderStatus = (index) => {
         if (completedSlides.includes(index)) {
@@ -22,8 +24,19 @@ export const MenuTopicComponent = () => {
             return "o"; 
         }
     };
-    
-    console.log("renderStatus = " , renderStatus)
+
+    useEffect(() => {
+        let count = 0;
+        for (let i = 0; i <= 5; i++) {
+            if (renderStatus(i) === "Done") {
+                count+= 16.67;
+            }
+        }
+        setDoneCount(count);
+    }, [slideNumber, completedSlides]);
+
+    console.log("Count =", doneCount);
+
     return (
       <>
         <div className='Undo-Container'>
@@ -55,6 +68,7 @@ export const MenuTopicComponent = () => {
                     <hr />
                     <p>Required</p>
                     <hr />
+
                 </div>
                 <div className="component-inside-req">
                     <BoxProgressInside name={cardTitles[0]} Status={renderStatus(0)}/>
@@ -63,6 +77,7 @@ export const MenuTopicComponent = () => {
                     <BoxProgressInside name={cardTitles[3]} Status={renderStatus(3)}/>
                     <BoxProgressInside name={cardTitles[4]} Status={renderStatus(4)}/>
                     <BoxProgressInside name={cardTitles[5]} Status={renderStatus(5)}/>
+
                 </div>
             </div>
             <div className="Recommended-Progress-component">
@@ -104,5 +119,6 @@ export const MenuTopicComponent = () => {
         </div>
     </>
     )
-  }
-  
+
+}
+

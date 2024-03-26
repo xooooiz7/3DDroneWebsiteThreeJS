@@ -8,7 +8,6 @@ import {useCustomization } from '../../contexts/Customization';
 import { chairColors } from './DatasetModel';
 import { FullPalateColor } from './CustomPagePalate';
 
-
 export const SliderComponent = () => {
     const sliderRef = useRef(null); 
     const [isSliderOpen, setIsSliderOpen] = useState(true);
@@ -253,9 +252,9 @@ export const BoxProgressInside = ({ name, Status }) => {
   )
 }
 
-
 const ProgressBar = ({ value, maxValue }) => {
-  const [progress, setProgress] = useState(0);
+  const [setProgress] = useState(0);
+  const {doneCount} = useCustomization() ;
 
   useEffect(() => {
     if (value >= 0 && value <= maxValue) {
@@ -263,13 +262,13 @@ const ProgressBar = ({ value, maxValue }) => {
     }
   }, [value, maxValue]);
 
+
   return (
     <div>
-      <div className='percentage-status'><p>25%</p></div>
+      <div className='percentage-status'><p>{doneCount.toFixed(0)}%</p></div>
     <div className="progress-bar-container">
-      {/* <div className="progress-bar" style={{ width: `${progress}%` }}></div> */}
       
-      <div className="progress-bar" style={{ width: `${25}%` }}>
+      <div className="progress-bar" style={{ width: `${doneCount}%` }}>
       </div>
     </div>
     </div>

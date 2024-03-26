@@ -11,15 +11,15 @@ const dataset_model = [
       colorsProp: ["#E9351D" ,"#4127DC" ,"#000000" , "#B85C1A" , "#F1FF52" , "#34C38F" ,"#F5F5F5" ,"#858585" , "#E252C3" , "#4CA9DE"]
     },
     {
-      numOfBoxes: 3,
+      numOfBoxes: 2,
       imageProps: [
         "https://images.unsplash.com/photo-1699959634881-16f34059a78f?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
         "https://images.unsplash.com/photo-1690885744537-1ff88d3ff9ad?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
         "https://images.unsplash.com/photo-1708169967312-889c71da622b?q=80&w=1744&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],     
-      namesProp: ["Leg A","Leg K","Leg C"],
-      wingName : ["Leg A","Legssss","Leg C"] , 
-      pricesProp: [350, 450 , 400],
-      colorsProp: ["#683434" ,"#1a5e1a" ,"#659994" , "#896599" , "#59555b" ]
+      namesProp: ["Leg A","Leg B"], // ใช้สำหรับ set ค่าของ ชื่อ
+      wingName : ["Leg A","Leg C"] , // ใช้สำหรับ set ค่าของ 3D Object
+      pricesProp: [350, 400],
+      colorsProp: ["#E9351D" ,"#4127DC" ,"#000000" , "#B85C1A" , "#F1FF52" , "#34C38F" ,"#F5F5F5" ,"#858585" , "#E252C3" , "#4CA9DE"]
     },
     {
       numOfBoxes: 3,
@@ -27,17 +27,41 @@ const dataset_model = [
         "https://images.unsplash.com/photo-1699959634881-16f34059a78f?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
         "https://images.unsplash.com/photo-1690885744537-1ff88d3ff9ad?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
         "https://images.unsplash.com/photo-1708169967312-889c71da622b?q=80&w=1744&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],     
-      namesProp: ["BUG","BUG","BUG"],
-      wingName : ["BUG","BUG","BUG"] , 
+      namesProp: ["FC A","FC B","FC C"],
+      FCName : ["FC A","FC B","FC C"] , 
       pricesProp: [350, 450 , 400],
       colorsProp: ["#683434" ,"#1a5e1a" ,"#659994" , "#896599" , "#59555b" ]
       
     },
     {
-      numOfBoxes: 7,
-      imageProps: ["LegsA","LegsB", "LegsC", "LegsD", "LegsE", "LegsF", "LegsG"],
-      namesProp: ["a","b","c", "d","f","g","e"],
-      pricesProp: [1,2, 3, 4,2, 3, 4],
+      numOfBoxes: 3,
+      imageProps: [
+        "https://images.unsplash.com/photo-1699959634881-16f34059a78f?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
+        "https://images.unsplash.com/photo-1690885744537-1ff88d3ff9ad?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
+        "https://images.unsplash.com/photo-1708169967312-889c71da622b?q=80&w=1744&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],     
+      namesProp: ["Wings A","Wings B","Wings C"],
+      WingName : ["Wings A","Wings B","Wings C"] , 
+      pricesProp: [350, 450 , 400],
+      colorsProp: ["#683434" ,"#1a5e1a" ,"#659994" , "#896599" , "#59555b" ]
+      
+    },
+    {
+      numOfBoxes: 1,
+      imageProps: [
+        "https://images.unsplash.com/photo-1699959634881-16f34059a78f?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",],     
+      namesProp: ["Motors A"],
+      MotorsName : ["Motors A"] , 
+      pricesProp: [350],
+      colorsProp: ["#683434" ,"#1a5e1a" ,"#659994" , "#896599" , "#59555b" ]
+      
+    },
+    {
+      numOfBoxes: 1,
+      imageProps: [
+        "https://images.unsplash.com/photo-1699959634881-16f34059a78f?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],     
+      namesProp: ["Battery A"],
+      BatteryName : ["Battery A"] , 
+      pricesProp: [350],
       colorsProp: ["#683434" ,"#1a5e1a" ,"#659994" , "#896599" , "#59555b" ]
       
     },

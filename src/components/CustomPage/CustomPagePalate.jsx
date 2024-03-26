@@ -28,11 +28,9 @@ export const FullPalateColor = ({slideNext }) => {
 
     const handleColorClick = (color) => {
         if (slideNumber === 0 && keyNumber === 0) {
-            console.log("dataset_cardTitles" , dataset_title)
             setChairColor(color);
         }
         if (slideNumber === 1 && keyNumber === 0){
-            console.log("dataset_cardTitles" , dataset_title)
             setLegColor(color);
         }
       };
