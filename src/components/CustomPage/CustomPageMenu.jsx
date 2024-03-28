@@ -228,7 +228,7 @@ const BoxComponent = ({ numOfBoxes , imageProps, namesProp, pricesProp , slideIn
       }}
       
       style={{ boxShadow: '0px 4px rgba(0, 0, 0, 0.2)', marginTop: '-1vh', width: '10.7vw', height: '78%', 
-      backgroundColor: '#E2E3E3', borderRadius: '1.2vw' }}>
+      backgroundColor: '#DDDDDD', borderRadius: '1.2vw' }}>
 
         
         <div className="InnerBox" >

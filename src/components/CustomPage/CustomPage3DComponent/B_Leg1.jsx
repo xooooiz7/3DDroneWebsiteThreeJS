@@ -1,8 +1,11 @@
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
+import * as THREE from 'three'; // Import THREE from three.js library
 
 export function B_Leg1(props) {
   const { nodes, materials } = useGLTF('./models/Leg/B_Leg1.glb')
+  materials['lambert1.001'].color = new THREE.Color(0xffffff); // Assuming THREE is imported
+
   return (
     <group {...props} dispose={null}>
       <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>

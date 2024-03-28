@@ -15,7 +15,7 @@ import { cardTitles } from './DatasetModel';
 
 export function MainFrame(props) {
   const { nodes, materials } = useGLTF('./models/MainFrame.glb')
-  const {meterial,legs,motors,battery,fC,wings} = useCustomization() 
+  const {meterial,legs,motors,battery,fC,wings,chairColor ,cushionColor } = useCustomization() 
 
   console.log('motors' , motors)
   console.log('battery' , battery)
