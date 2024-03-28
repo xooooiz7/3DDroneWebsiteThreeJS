@@ -1,9 +1,13 @@
+import FrameA from '../../assets/image/FrameA.png';
+import FrameB from '../../assets/image/FrameB.png';
 
-const cardTitles = ["Frame", "Legs", "FC","Wings",'Motors','Battery','Camera','Cam Control','GPS','Sensor'];
+const cardTitles = ["Frame", "Legs", "FC","Motors",'Wings','Battery','Camera','Cam Control','GPS','Sensor'];
 const dataset_model = [
     {
       numOfBoxes: 2,
       imageProps: [
+        FrameA,
+        FrameB
       ],
       namesProp: ["Frame A","Frame B","Frame C", "d"],
       FrameName : ["Frame A","Frame B","Frame C", "d"] , 
@@ -39,8 +43,8 @@ const dataset_model = [
         "https://images.unsplash.com/photo-1699959634881-16f34059a78f?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
         "https://images.unsplash.com/photo-1690885744537-1ff88d3ff9ad?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
         "https://images.unsplash.com/photo-1708169967312-889c71da622b?q=80&w=1744&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],     
-      namesProp: ["Wings A","Wings B","Wings C"],
-      WingName : ["Wings A","Wings B","Wings C"] , 
+      namesProp: ["Motors A"],
+      MotorsName : ["Motors A"] , 
       pricesProp: [350, 450 , 400],
       colorsProp: ["#683434" ,"#1a5e1a" ,"#659994" , "#896599" , "#59555b" ]
       
@@ -49,8 +53,8 @@ const dataset_model = [
       numOfBoxes: 1,
       imageProps: [
         "https://images.unsplash.com/photo-1699959634881-16f34059a78f?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",],     
-      namesProp: ["Motors A"],
-      MotorsName : ["Motors A"] , 
+      namesProp: ["Wings A"],
+      WingName : ["Wings A"] , 
       pricesProp: [350],
       colorsProp: ["#683434" ,"#1a5e1a" ,"#659994" , "#896599" , "#59555b" ]
       

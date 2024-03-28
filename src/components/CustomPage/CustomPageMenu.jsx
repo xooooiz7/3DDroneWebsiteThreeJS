@@ -41,6 +41,10 @@ export const SliderComponent = () => {
         namesProp={data.namesProp}
         pricesProp={data.pricesProp}
         FrameName = {data.FrameName}
+        FCName = {data.FCName}
+        WingNames = {data.WingName}
+        MotorsName = {data.MotorsName}
+        BatteryName = {data.BatteryName}
         WingName = {data.wingName}
         slideIndex={index}
       />
@@ -138,15 +142,14 @@ export const SliderComponent = () => {
     
 }
 
-
-const BoxComponent = ({ numOfBoxes , imageProps, namesProp, pricesProp , slideIndex ,FrameName ,WingName}) => {
+const BoxComponent = ({ numOfBoxes , imageProps, namesProp, pricesProp , slideIndex ,FrameName ,WingName , FCName , WingNames , MotorsName , BatteryName}) => {
   
   const boxesInColumn1 = (Math.ceil(numOfBoxes / 2));
   const boxesInColumn2 = (numOfBoxes - boxesInColumn1);
  
 
-  const { setObjectName , setKeynumber  , setSlideNumber , meterial , setMeterial , legs , setLegs ,chairColor ,
-    setChairColor,cushionColor , setCushionColor , isVisible, setIsVisible} = useCustomization(); 
+  const { setObjectName , setKeynumber  , setSlideNumber , meterial , setMeterial , legs , setLegs , isVisible, setIsVisible ,
+    fC , setFC,wings , setWings, motors , setMotors, battery , setBattery} = useCustomization(); 
   
   const handleClick = () => {
     setIsVisible(!isVisible);
@@ -168,14 +171,18 @@ const BoxComponent = ({ numOfBoxes , imageProps, namesProp, pricesProp , slideIn
     padding: '1vh'
   };
   
-  const chairColorsArray = chairColors.map(chair => chair.color);
 
   const createBox = (key,slideIndex) => (
     
     <div key={key} style={boxStyle} className='BoxComponent'>
 
       <div  className={`item ${meterial === "" ? "item--active" : ""} 
-                      ${legs === "" ? "item--active" : ""} `}
+                              ${legs === "" ? "item--active" : ""} 
+                              ${fC === "" ? "item--active" : ""} 
+                              ${wings === "" ? "item--active" : ""} 
+                              ${motors === "" ? "item--active" : ""} 
+                              ${battery === "" ? "item--active" : ""} 
+                              `}
       
       onClick={() => {
 
@@ -196,6 +203,23 @@ const BoxComponent = ({ numOfBoxes , imageProps, namesProp, pricesProp , slideIn
             setObjectName(WingName[key])
           }
         
+        }
+        if(slideIndex === 2){
+          setFC(FCName[key])
+          setObjectName(FCName[key])
+        }
+        if(slideIndex === 3){
+          
+          setMotors(MotorsName[key])
+          setObjectName(MotorsName[key])
+        }
+        if(slideIndex === 4){
+          setWings(WingNames[key])
+          setObjectName(WingNames[key])
+        }
+        if(slideIndex === 5){
+          setBattery(BatteryName[key])
+          setObjectName(BatteryName[key])
         }
         handleClick() 
         setKeynumber(key)
