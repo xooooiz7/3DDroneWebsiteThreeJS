@@ -9,10 +9,9 @@ import { useCustomization } from '../../contexts/Customization';
 import { useState } from 'react';
 
 export const MenuTopicComponent = () => {
-
+    
     const {slideNumber ,keyNumber ,doneCount ,setDoneCount } = useCustomization() ;
     const [completedSlides, setCompletedSlides] = useState([]); 
-    
 
     const renderStatus = (index) => {
         if (completedSlides.includes(index)) {
@@ -35,7 +34,6 @@ export const MenuTopicComponent = () => {
         setDoneCount(count);
     }, [slideNumber, completedSlides]);
 
-    console.log("Count =", doneCount);
 
     return (
       <>

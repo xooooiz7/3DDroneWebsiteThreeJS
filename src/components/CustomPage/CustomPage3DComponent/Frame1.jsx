@@ -11,7 +11,7 @@ export function Frame1(props) {
   console.log("Chaircolor " , chairColor)
   return (
     <group {...props} dispose={null}>
-      <mesh geometry={nodes.Frame.geometry} material={materials.phong76} position={[0.058, 0.079, 0.043]} rotation={[-Math.PI, -1.571, 0]} scale={0.001} >
+      <mesh geometry={nodes.Frame.geometry} material={materials.phong76} position={[0.058-0.1, 0.079+0.04, 0.043]} rotation={[-Math.PI, -1.571, 0]} scale={0.001} >
     
       
       <meshStandardMaterial color={ chairColor } />

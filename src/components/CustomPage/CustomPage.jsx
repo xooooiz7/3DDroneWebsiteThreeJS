@@ -18,14 +18,11 @@ export const CustomPage = () => {
       <PresentationControls
         speed={1.5}
         global
-        zoom={0.8}
+        zoom={0.9}
       >
         <Stage environment="city" intensity={0.6} castShadow={false}>
               <OrbitControls/>
-               <MainFrame scale={3.5} position={[-0.3, 0, 0]} rotation={[0.4, 0, 0]}/>
-              <boxGeometry />
-          
-
+               <MainFrame scale={3} position={[-0.5, 0.2, -1]} rotation={[0.4, 0, 0]}/>
         </Stage>
         
       </PresentationControls>
